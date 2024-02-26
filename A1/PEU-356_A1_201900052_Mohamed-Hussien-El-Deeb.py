@@ -41,12 +41,11 @@ def draw(
 
 
 def q1b():
-
-    figure, (a1, a2) = plt.subplots(1, 2, figsize=(18, 9))
-
     x_values = np.arange(-2.5, 2.5, 0.1)
     y_values = np.arange(-2.5, 2.5, 0.1)
     curve_values = np.arange(-5, 6, 0.5)
+
+    figure, (a1, a2) = plt.subplots(1, 2, figsize=(18, 9))
 
     draw(
         a1,
@@ -71,5 +70,39 @@ def q1b():
     plt.savefig("./A1/Q1B.png", transparent=True, dpi=100, bbox_inches="tight")
 
 
+def q2b():
+    x_values = np.arange(-2.5, 2.5, 0.5)
+    y_values = np.arange(-2.5, 2.5, 0.5)
+
+    X, Y = np.meshgrid(x_values, y_values)
+
+    f = X * Y
+    u = np.gradient(f, axis=1)
+    v = np.gradient(f, axis=0)
+    mag = np.sqrt(u**2 + v**2)
+    mag[mag == 0] = 1
+    u = u / mag
+    v = v / mag
+    plt.quiver(X, Y, u, v, color="r", label=r"$\hat{e}_u$")
+    f = X**2 - Y**2
+    u = np.gradient(f, axis=1)
+    v = np.gradient(f, axis=0)
+    mag = np.sqrt(u**2 + v**2)
+    mag[mag == 0] = 1
+    u = u / mag
+    v = v / mag
+    plt.quiver(X, Y, u, v, color="b", label=r"$\hat{e}_v$")
+    plt.legend()
+
+    plt.xlabel("x")
+    plt.ylabel("y")
+
+    plt.grid(color="black", linestyle="-", linewidth=0.5, which="major")
+    plt.grid(color="grey", linestyle="--", linewidth=0.25, which="minor")
+    plt.minorticks_on()
+
+    plt.savefig("./A1/Q1C.png", transparent=True, dpi=100, bbox_inches="tight")
+
+
 if __name__ == "__main__":
-    q1b()
+    q2b()
