@@ -4,6 +4,7 @@
 \usepackage{parskip}
 \usepackage{float}
 \usepackage{amsmath}
+\usepackage{amssymb}
 
 \hypersetup{
     colorlinks,
@@ -74,11 +75,11 @@
 \]
 
 \[
-    \hat{e}_u = \frac{\nabla u}{|\nabla u|} = \frac{y  \hat{\dot{\imath}} + x  \hat{\dot{\jmath}}}{\sqrt{x^2 + y^2}}
+    \hat{\textbf{e}}_u = \frac{\nabla u}{|\nabla u|} = \frac{y  \hat{\dot{\imath}} + x  \hat{\dot{\jmath}}}{\sqrt{x^2 + y^2}}
 \]
 
 \[
-    \hat{e}_v = \frac{\nabla v}{|\nabla v|} = \frac{2x  \hat{\dot{\imath}} - 2y  \hat{\dot{\jmath}}}{\sqrt{4x^2 + 4y^2}}
+    \hat{\textbf{e}}_v = \frac{\nabla v}{|\nabla v|} = \frac{2x  \hat{\dot{\imath}} - 2y  \hat{\dot{\jmath}}}{\sqrt{4x^2 + 4y^2}}
 \]
 
 \begin{figure}[H]
@@ -96,7 +97,7 @@
 \subsection{d}
 
 \[
-    \hat{e}_u \times \hat{e}_v =
+    \hat{\textbf{e}}_u \times \hat{\textbf{e}}_v =
     \begin{vmatrix}
         \hat{\dot{\imath}}         & \hat{\dot{\jmath}}          & \hat{k} \\
         \frac{y}{\sqrt{x^2 + y^2}} & \frac{x}{\sqrt{x^2 + y^2}}  & 0       \\
@@ -112,9 +113,9 @@ From the previous result, we can see that the coordinate system is left-handed.
 
 \section{3.10.4}
 
-\(\hat{e}_1\) is the unit vector in the direction of increasing \(q_1\).
+\(\hat{\textbf{e}}_1\) is the unit vector in the direction of increasing \(q_1\).
 
-\(\hat{e}_1 = \left\langle1, 0, 0\right\rangle \)
+\(\hat{\textbf{e}}_1 = \left\langle1, 0, 0\right\rangle \)
 
 \subsection{a}
 
@@ -123,11 +124,11 @@ From the previous result, we can see that the coordinate system is left-handed.
 \]
 
 \[
-    \nabla \cdot \hat{e}_1 = \frac{1}{h_1 h_2 h_3}\left[\frac{\partial}{\partial q_1}\left(1 * h_2 h_3\right) + \frac{\partial}{\partial q_2}\left(0 * h_1 h_3\right) + \frac{\partial}{\partial q_3}\left(0 * h_1 h_2\right)\right]
+    \nabla \cdot \hat{\textbf{e}}_1 = \frac{1}{h_1 h_2 h_3}\left[\frac{\partial}{\partial q_1}\left(1 * h_2 h_3\right) + \frac{\partial}{\partial q_2}\left(0 * h_1 h_3\right) + \frac{\partial}{\partial q_3}\left(0 * h_1 h_2\right)\right]
 \]
 
 \[
-    \nabla \cdot \hat{e}_1 = \frac{1}{h_1 h_2 h_3} \frac{\partial}{\partial q_1}\left(h_2 h_3\right)
+    \nabla \cdot \hat{\textbf{e}}_1 = \frac{1}{h_1 h_2 h_3} \frac{\partial}{\partial q_1}\left(h_2 h_3\right)
 \]
 
 \subsection{b}
@@ -135,34 +136,198 @@ From the previous result, we can see that the coordinate system is left-handed.
 \[
     \nabla \times \textbf{V} = \frac{1}{h_1 h_2 h_3}
     \begin{vmatrix}
-        \hat{e}_1 h_1                 & \hat{e}_2 h_2                 & \hat{e}_3 h_3                 \\
+        \hat{\textbf{e}}_1 h_1        & \hat{\textbf{e}}_2 h_2        & \hat{\textbf{e}}_3 h_3        \\
         \frac{\partial}{\partial q_1} & \frac{\partial}{\partial q_2} & \frac{\partial}{\partial q_3} \\
         h_1 V_1                       & h_2 V_2                       & h_3 V_3                       \\
     \end{vmatrix}
 \]
 
 \[
-    \nabla \times \hat{e}_1 = \frac{1}{h_1 h_2 h_3}
+    \nabla \times \hat{\textbf{e}}_1 = \frac{1}{h_1 h_2 h_3}
     \begin{vmatrix}
-        \hat{e}_1 h_1                 & \hat{e}_2 h_2                 & \hat{e}_3 h_3                 \\
+        \hat{\textbf{e}}_1 h_1        & \hat{\textbf{e}}_2 h_2        & \hat{\textbf{e}}_3 h_3        \\
         \frac{\partial}{\partial q_1} & \frac{\partial}{\partial q_2} & \frac{\partial}{\partial q_3} \\
         h_1*1                         & h_2*0                         & h_3*0                         \\
     \end{vmatrix}
 \]
 
 \[
-    \nabla \times \hat{e}_1 = \frac{1}{h_1 h_2 h_3}\left(\hat{e}_2 h_2 \frac{\partial h_1}{\partial q_3} - \hat{e}_3 h_3 \frac{\partial h_1}{\partial q_2} \right)
+    \nabla \times \hat{\textbf{e}}_1 = \frac{1}{h_1 h_2 h_3}\left(\hat{\textbf{e}}_2 h_2 \frac{\partial h_1}{\partial q_3} - \hat{\textbf{e}}_3 h_3 \frac{\partial h_1}{\partial q_2} \right)
 \]
 
 \[
-    \nabla \times \hat{e}_1 = \frac{1}{h_1}\left[\hat{e}_2 \frac{1}{h_3} \frac{\partial h_1}{\partial q_3} - \hat{e}_3  \frac{1}{h_2}  \frac{\partial h_1}{\partial q_2} \right]
+    \nabla \times \hat{\textbf{e}}_1 = \frac{1}{h_1}\left[\hat{\textbf{e}}_2 \frac{1}{h_3} \frac{\partial h_1}{\partial q_3} - \hat{\textbf{e}}_3  \frac{1}{h_2}  \frac{\partial h_1}{\partial q_2} \right]
 \]
 
 \section{3.10.5}
 
+\[
+    \hat{\textbf{e}}_i = \frac{1}{h_i} \frac{\partial \textbf{r}}{\partial q_i}
+\]
+
+\[
+    \hat{\textbf{e}}_i \cdot \hat{\textbf{e}}_j = \frac{1}{h_i h_j} \left(\frac{\partial \textbf{r}}{\partial q_i}\right) \cdot \left(\frac{\partial \textbf{r}}{\partial q_j}\right)  = \delta_{ij}
+\]
+
+\[
+    \frac{\partial \textbf{r}}{\partial q_i} = \frac{\partial (x_j \hat{\varepsilon}_j)}{\partial q_i} = \frac{\partial x_j}{\partial q_i} \hat{\varepsilon}_j + x_j \frac{\partial \hat{\varepsilon}_j}{\partial q_i}
+\]
+
+\[
+    \because  \hat{\varepsilon}_{ij} = \delta_{ij}
+\]
+
+\[
+    \therefore \frac{\partial \hat{\varepsilon}_j}{\partial q_i} = 0
+\]
+
+\[
+    \frac{\partial \textbf{r}}{\partial q_i} = \frac{\partial x_j}{\partial q_i} \hat{\varepsilon}_j
+\]
+
+\[
+    \frac{\partial \textbf{r}}{\partial q_i} \cdot \frac{\partial \textbf{r}}{\partial q_j} = \frac{\partial x_k}{\partial q_i} \frac{\partial x_m}{\partial q_j} \left(\hat{\varepsilon}_k \cdot \hat{\varepsilon}_m\right)
+\]
+
+\[
+    = \frac{\partial x_k}{\partial q_i} \frac{\partial x_m}{\partial q_j} \delta_{km} = \frac{\partial x_k}{\partial q_i} \frac{\partial x_k}{\partial q_j}
+\]
+
+\[
+    \hat{\textbf{e}}_i \cdot \hat{\textbf{e}}_j = \frac{1}{h_i h_j} \frac{\partial x_k}{\partial q_i} \frac{\partial x_k}{\partial q_j} = \delta_{ij}
+\]
+
+\[
+    \frac{\partial x_k}{\partial q_i} \frac{\partial x_k}{\partial q_j} = h_i h_j \delta_{ij}
+\]
+
+\[
+    i = j \implies {\left(\frac{\partial x_k}{\partial q_i}\right)}^2 = h_i^2
+\]
+
+\[
+    \frac{\partial \hat{\textbf{e}}_i}{\partial q_j} = \frac{\partial}{\partial q_j} \left(\frac{1}{h_i} \frac{\partial \textbf{r}}{\partial q_i}\right) = \frac{\partial}{\partial q_j} \left(\frac{1}{h_i} \frac{\partial x_k}{\partial q_i} \hat{\varepsilon}_k\right)
+\]
+
+\[
+    = \frac{\partial}{\partial q_j} \left(\frac{1}{h_i} \frac{\partial x_k}{\partial q_i}\right) \hat{\varepsilon}_k
+\]
+
+\[
+    = \frac{1}{h_i} \left(\frac{\partial^2 x_k}{\partial q_j \partial q_i} - \frac{1}{h_i} \frac{\partial h_i}{\partial q_j} \frac{\partial x_k}{\partial q_i}\right) \hat{\varepsilon}_k
+\]
+
 \section{3.10.28}
 
+\[
+    x = r \sin{\theta} \cos{\varphi}, y = r \sin{\theta} \sin{\varphi}, z = r \cos{\theta}
+\]
+
+\[
+    \nabla = \hat{\textbf{e}}_1 \frac{1}{h_1} \frac{\partial}{\partial q_1} + \hat{\textbf{e}}_2 \frac{1}{h_2} \frac{\partial}{\partial q_2} + \hat{\textbf{e}}_3 \frac{1}{h_3} \frac{\partial}{\partial q_3}
+\]
+
+\[
+    \nabla_{xyz} =  \hat{\dot{\imath}} \frac{\partial}{\partial x} + \hat{\dot{\jmath}} \frac{\partial}{\partial y} +  \hat{k} \frac{\partial}{\partial z}
+\]
+
+\[
+    \nabla_{r \theta \varphi } = \hat{\textbf{e}}_r \frac{\partial}{\partial r} + \hat{\textbf{e}}_\theta \frac{1}{r} \frac{\partial}{\partial \theta} + \hat{\textbf{e}}_\varphi \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
+\]
+
+\[
+    \nabla_{xyz} = \nabla_{r \theta \varphi }
+\]
+
+\[
+    \hat{\dot{\imath}} \frac{\partial}{\partial x} + \hat{\dot{\jmath}} \frac{\partial}{\partial y} +  \hat{k} \frac{\partial}{\partial z} = \hat{\textbf{e}}_r \frac{\partial}{\partial r} + \hat{\textbf{e}}_\theta \frac{1}{r} \frac{\partial}{\partial \theta} + \hat{\textbf{e}}_\varphi \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
+\]
+
+\[
+    \hat{\textbf{e}}_r = \frac{\partial x_j}{\partial r} \hat{\varepsilon}_j + x_j \frac{\partial \hat{\varepsilon}_j}{\partial r} = \frac{\partial x}{\partial r} \hat{\dot{\imath}} + \frac{\partial y}{\partial r} \hat{\dot{\jmath}} + \frac{\partial z}{\partial r} \hat{k}
+\]
+
+\[
+    = \sin{\theta} \cos{\varphi} \hat{\dot{\imath}} + \sin{\theta} \sin{\varphi} \hat{\dot{\jmath}} + \cos{\theta} \hat{k}
+\]
+
+\[
+    \hat{\textbf{e}}_\theta = \cos{\theta} \cos{\varphi} \hat{\dot{\imath}} + \cos{\theta} \sin{\varphi} \hat{\dot{\jmath}} - \sin{\theta} \hat{k}
+\]
+
+\[
+    \hat{\textbf{e}}_\varphi = -\sin{\varphi} \hat{\dot{\imath}} + \cos{\varphi} \hat{\dot{\jmath}}
+\]
+
+\[
+    \hat{\dot{\imath}} \frac{\partial}{\partial x} + \hat{\dot{\jmath}} \frac{\partial}{\partial y} +  \hat{k} \frac{\partial}{\partial z} = \left(\sin{\theta} \cos{\varphi} \hat{\dot{\imath}} + \sin{\theta} \sin{\varphi} \hat{\dot{\jmath}} + \cos{\theta} \hat{k}\right)  \frac{\partial}{\partial r}
+\]
+
+\[
+    + \left(\cos{\theta} \cos{\varphi} \hat{\dot{\imath}} + \cos{\theta} \sin{\varphi} \hat{\dot{\jmath}} - \sin{\theta} \hat{k}\right) \frac{1}{r} \frac{\partial}{\partial \theta}
+\]
+
+\[
+    + \left(-\sin{\varphi} \hat{\dot{\imath}} + \cos{\varphi} \hat{\dot{\jmath}}\right) \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
+\]
+
+\[
+    = \hat{\dot{\imath}} \left(\sin{\theta} \cos{\varphi} \frac{\partial}{\partial r} + \cos{\theta} \cos{\varphi} \frac{1}{r} \frac{\partial}{\partial \theta} - \sin{\varphi} \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi} \right)
+\]
+
+\[
+    + \hat{\dot{\jmath}} \left(\sin{\theta} \sin{\varphi} \frac{\partial}{\partial r} + \cos{\theta} \sin{\varphi} \frac{1}{r} \frac{\partial}{\partial \theta} + \cos{\varphi} \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi} \right)
+\]
+
+\[
+    + \hat{k} \left(\cos{\theta} \frac{\partial}{\partial r} - \sin{\theta} \frac{1}{r} \frac{\partial}{\partial \theta} \right)
+\]
+
+\[
+    \frac{\partial}{\partial x} = \sin{\theta} \cos{\varphi} \frac{\partial}{\partial r} + \cos{\theta} \cos{\varphi} \frac{1}{r} \frac{\partial}{\partial \theta} - \sin{\varphi} \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
+\]
+
+\[
+    \frac{\partial}{\partial y} = \sin{\theta} \sin{\varphi} \frac{\partial}{\partial r} + \cos{\theta} \sin{\varphi} \frac{1}{r} \frac{\partial}{\partial \theta} + \cos{\varphi} \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
+\]
+
+\[
+    \frac{\partial}{\partial z} = \cos{\theta} \frac{\partial}{\partial r} - \sin{\theta} \frac{1}{r} \frac{\partial}{\partial \theta}
+\]
+
 \section{3.10.29}
+
+\[
+    x = r \sin{\theta} \cos{\varphi}, y = r \sin{\theta} \sin{\varphi}
+\]
+
+\[
+    -i\left(x \frac{\partial}{\partial y} - y \frac{\partial}{\partial x}\right)
+\]
+
+\[
+    = -i r \sin{\theta} \cos{\varphi} \left(\sin{\theta} \sin{\varphi} \frac{\partial}{\partial r} + \cos{\theta} \sin{\varphi} \frac{1}{r} \frac{\partial}{\partial \theta} + \cos{\varphi} \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}\right)
+\]
+
+\[
+    + i r \sin{\theta} \sin{\varphi} \left(\sin{\theta} \cos{\varphi} \frac{\partial}{\partial r} + \cos{\theta} \cos{\varphi} \frac{1}{r} \frac{\partial}{\partial \theta} - \sin{\varphi} \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}\right)
+\]
+
+\[
+    = i r \sin{\theta} \left(\sin{\theta} \sin{\varphi} \cos{\varphi} - \sin{\theta} \sin{\varphi} \cos{\varphi} \right) \frac{\partial}{\partial r}
+\]
+
+\[
+    + i r \sin{\theta} \left(\sin{\varphi} \cos{\varphi} - \sin{\varphi} \cos{\varphi}\right) \cos{\theta} \frac{1}{r} \frac{\partial}{\partial \theta}
+\]
+
+\[
+    - i \left(\sin^2{\varphi} + \cos^2{\varphi} \right) \frac{\partial}{\partial \varphi}
+\]
+
+\[
+    = - i \frac{\partial}{\partial \varphi}
+\]
 
 \section{3.10.30}
 
