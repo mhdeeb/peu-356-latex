@@ -1,4 +1,5 @@
 \documentclass[12pt]{article}
+\usepackage[svgnames,x11names,table]{xcolor}
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{parskip}
@@ -11,8 +12,8 @@
     colorlinks,
     citecolor=black,
     filecolor=black,
-    linkcolor=black,
-    urlcolor=blue,
+    linkcolor=RoyalBlue4,
+    urlcolor=RoyalBlue4,
 }
 
 \title{PEU 356 Assignment 1}
@@ -748,20 +749,59 @@ With the quantum mechanical orbital angular momentum operator defined as
 \]
 
 \[
-    = \sin{\theta} \left(\cos{\varphi} - i \sin{\varphi}\right)
-    \frac{\partial}{\partial r} + \cos{\theta} \left(\cos{\varphi} - i \sin{\varphi}\right)
-    \frac{1}{r} \frac{\partial}{\partial \theta}
+    = -\sin{\theta} \left(\cos{\varphi} - i \sin{\varphi}\right) \frac{\partial}{\partial r}
+    - \cos{\theta} \left(\cos{\varphi} - i \sin{\varphi}\right) \frac{1}{r} \frac{\partial}{\partial \theta}
 \]
 
 \[
-    + \left(i \cos{\varphi} + \sin{\varphi}\right) \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
+    + i \left(\cos{\varphi} - i \sin{\varphi}\right) \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
 \]
 
 \[
-    = e^{-i \varphi}
+    = - e^{-i \varphi}
     \left(
-    \sin{\theta} \frac{\partial}{\partial r} + \cos{\theta} \frac{1}{r} \frac{\partial}{\partial \theta}
+    \sin{\theta} \frac{\partial}{\partial r}
+    + \cos{\theta} \frac{1}{r} \frac{\partial}{\partial \theta}
     + i \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
+    \right)
+\]
+
+\[
+    L_x - i L_y =
+\]
+
+\[
+    - r \cos{\theta} e^{-i \varphi}
+    \left(
+    \sin{\theta} \frac{\partial}{\partial r}
+    + \cos{\theta} \frac{1}{r} \frac{\partial}{\partial \theta}
+    + i \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
+    \right)
+\]
+
+\[
+    + r \sin{\theta} e^{-i \varphi}
+    \left(
+    \cos{\theta} \frac{\partial}{\partial r} - \sin{\theta} \frac{1}{r} \frac{\partial}{\partial \theta}
+    \right)
+\]
+
+\[
+    = - r e^{-i \varphi}
+    \left(
+    \sin{\theta} \cos{\theta} \frac{\partial}{\partial r}
+    + \frac{\cos^2{\theta}}{r} \frac{\partial}{\partial \theta}
+    + i \frac{\cot{\theta}}{r}\frac{\partial}{\partial \varphi}
+    - \sin{\theta} \cos{\theta} \frac{\partial}{\partial r}
+    + \frac{\sin^2{\theta}}{r} \frac{\partial}{\partial \theta}
+    \right)
+\]
+
+\[
+    = - e^{-i \varphi}
+    \left(
+    \frac{\partial}{\partial \theta}
+    - i \cot{\theta}\frac{\partial}{\partial \varphi}
     \right)
 \]
 
