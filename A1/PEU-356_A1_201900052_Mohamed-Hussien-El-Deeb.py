@@ -45,7 +45,7 @@ def q1b():
     y_values = np.arange(-2.5, 2.5, 0.1)
     curve_values = np.arange(-5, 6, 0.5)
 
-    figure, (a1, a2) = plt.subplots(1, 2, figsize=(18, 9))
+    _, (a1, a2) = plt.subplots(1, 2, figsize=(18, 9))
 
     draw(
         a1,
