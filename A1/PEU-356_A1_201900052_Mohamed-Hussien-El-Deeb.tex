@@ -816,7 +816,7 @@ momentum operator.
 Written in component form, this relation is
 
 \[
-    L_y L_z - L_z L_y = i L_x , \quad L_z L_x - L_x L_z = -L_y ,\quad L_x L_y - L_y L_x = i L_z
+    L_y L_z - L_z L_y = i L_x , \quad L_z L_x - L_x L_z = i L_y ,\quad L_x L_y - L_y L_x = i L_z
 \]
 
 Using the commutator notation, \([A, B] = AB - BA\), and the definition of the Levi-Civita symbol
@@ -832,6 +832,24 @@ where \(i , j , k\) are \(x, y, z\) in any order.
 but Cartesian components for the cross product.
 
 \subsection{Solution}
+
+\[
+    \textbf{L} \times \textbf{L} = \left\lvert \begin{array}{ccc}
+        \hat{\dot{\imath}} & \hat{\dot{\jmath}} & \hat{k} \\
+        L_x                & L_y                & L_z     \\
+        L_x                & L_y                & L_z     \\
+    \end{array} \right\rvert
+\]
+
+\[
+    = \left(L_y L_z - L_z L_y\right) \hat{\dot{\imath}}
+    + \left(L_z L_x - L_x L_z\right) \hat{\dot{\jmath}}
+    + \left(L_x L_y - L_y L_x\right) \hat{k}
+\]
+
+\[
+    = [L_y, L_z] \hat{\dot{\imath}} + [L_z, L_x] \hat{\dot{\jmath}} + [L_x, L_y] \hat{k}
+\] % TODO: finish this
 
 \section{3.10.32}
 
@@ -876,9 +894,249 @@ but Cartesian components for the cross product.
 
 \subsubsection{a}
 
+\[
+    \textbf{L} = -i \left(\textbf{r} \times \nabla\right)
+\]
+
+\[
+    \textbf{r} = r \hat{\textbf{e}}_r
+\]
+
+\[
+    \nabla_{r \theta \varphi } = \hat{\textbf{e}}_r \frac{\partial}{\partial r}
+    + \hat{\textbf{e}}_\theta \frac{1}{r} \frac{\partial}{\partial \theta}
+    + \hat{\textbf{e}}_\varphi \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
+\]
+
+\[
+    \textbf{L} = -i
+    \textbf{r} \times
+    \left(
+    \hat{\textbf{e}}_r \frac{\partial}{\partial r}
+    + \hat{\textbf{e}}_\theta \frac{1}{r} \frac{\partial}{\partial \theta}
+    + \hat{\textbf{e}}_\varphi \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
+    \right)
+\]
+
+\[
+    = -i r
+    \left(
+    \left(\hat{\textbf{e}}_r \times \hat{\textbf{e}}_r\right)  \frac{\partial}{\partial r}
+    + \left(\hat{\textbf{e}}_r \times \hat{\textbf{e}}_\theta\right)
+    \frac{1}{r} \frac{\partial}{\partial \theta}
+    + \left(\hat{\textbf{e}}_r \times \hat{\textbf{e}}_\varphi\right)
+    \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
+    \right)
+\]
+
+\(\because \) spherical polar coordinates are right-handed and orthonormal system.
+
+\[
+    \therefore \hat{\textbf{e}}_i \times \hat{\textbf{e}}_j = \varepsilon_{ijk} \hat{\textbf{e}}_k
+\]
+
+where \(\varepsilon_{ijk}\) is the Levi-Civita symbol.
+\(\varepsilon_{ijk} = 1\) if \(i, j, k\) is an even permutation of \(r, \theta, \varphi \), \(-1\) if it
+is an odd permutation, and 0 if any two indices are equal.
+
+\[
+    \therefore \textbf{L} = -i r
+    \left(
+    0  \frac{\partial}{\partial r}
+    + 1 \hat{\textbf{e}}_\varphi
+    \frac{1}{r} \frac{\partial}{\partial \theta}
+    - 1 \hat{\textbf{e}}_\theta
+    \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
+    \right)
+\]
+
+\[
+    = i
+    \left(
+    \hat{\textbf{e}}_\theta \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
+    - \hat{\textbf{e}}_\varphi \frac{\partial}{\partial \theta}
+    \right)
+\]
+
 \subsubsection{b}
 
+\[
+    \hat{\textbf{e}}_\theta
+    = \cos{\theta} \cos{\varphi} \hat{\dot{\imath}}
+    + \cos{\theta} \sin{\varphi} \hat{\dot{\jmath}}
+    - \sin{\theta} \hat{k}
+\]
+
+\[
+    \hat{\textbf{e}}_\varphi
+    = -\sin{\varphi} \hat{\dot{\imath}}
+    + \cos{\varphi} \hat{\dot{\jmath}}
+\]
+
+\[
+    \textbf{L} =
+    i \left(
+    \cos{\theta} \cos{\varphi} \hat{\dot{\imath}}
+    + \cos{\theta} \sin{\varphi} \hat{\dot{\jmath}}
+    - \sin{\theta} \hat{k}
+    \right)
+    \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
+    +i \left(
+    \sin{\varphi} \hat{\dot{\imath}}
+    -\cos{\varphi} \hat{\dot{\jmath}}
+    \right)
+    \frac{\partial}{\partial \theta}
+\]
+
+\[
+    = i \cos{\varphi} \cot{\theta} \hat{\dot{\imath}} \frac{\partial}{\partial \varphi}
+    + i \sin{\varphi} \cot{\theta} \hat{\dot{\jmath}} \frac{\partial}{\partial \varphi}
+    - i \hat{k} \frac{\partial}{\partial \varphi}
+    + i \sin{\varphi} \hat{\dot{\imath}} \frac{\partial}{\partial \theta}
+    - i \cos{\varphi} \hat{\dot{\jmath}} \frac{\partial}{\partial \theta}
+\]
+
+\[
+    = - i \hat{\dot{\imath}}
+    \left(
+    -\cos{\varphi} \cot{\theta}\frac{\partial}{\partial \varphi}
+    - \sin{\varphi} \frac{\partial}{\partial \theta}
+    \right)
+\]
+
+\[
+    - i \hat{\dot{\jmath}}
+    \left(
+    \cos{\varphi} \frac{\partial}{\partial \theta}
+    -\sin{\varphi} \cot{\theta}\frac{\partial}{\partial \varphi}
+    \right)
+    - i \hat{k} \frac{\partial}{\partial \varphi}
+\]
+
+\[
+    L_x = i
+    \left(
+    \cos{\varphi} \cot{\theta}\frac{\partial}{\partial \varphi}
+    + \sin{\varphi} \frac{\partial}{\partial \theta}
+    \right)
+\]
+
+\[
+    L_y = - i
+    \left(
+    \cos{\varphi} \frac{\partial}{\partial \theta}
+    -\sin{\varphi} \cot{\theta}\frac{\partial}{\partial \varphi}
+    \right)
+\]
+
+\[
+    L_z = - i \frac{\partial}{\partial \varphi}
+\]
+
 \subsubsection{c}
+
+\[
+    L_x^2 =
+    -{\left(
+    \cos{\varphi} \cot{\theta}\frac{\partial}{\partial \varphi}
+    + \sin{\varphi} \frac{\partial}{\partial \theta}
+    \right)}^2
+\]
+
+\[
+    = - \cot^2{\theta} \cos{\varphi} \frac{\partial}{\partial \varphi}
+    \left(\cos{\varphi} \frac{\partial}{\partial \varphi}\right)
+    - \sin^2{\varphi} \frac{\partial^2}{\partial \theta^2}
+\]
+
+\[
+    - \cos{\varphi} \cot{\theta}\frac{\partial}{\partial \varphi}
+    \left(\sin{\varphi} \frac{\partial}{\partial \theta}\right)
+    - \sin{\varphi} \cos{\varphi} \frac{\partial}{\partial \theta}
+    \left(\cot{\theta}\frac{\partial}{\partial \varphi}\right)
+\]
+
+\[
+    L_y^2 =
+    -{\left(
+    \sin{\varphi} \cot{\theta}\frac{\partial}{\partial \varphi}
+    - \cos{\varphi} \frac{\partial}{\partial \theta}
+    \right)}^2
+\]
+
+\[
+    = - \cot^2{\theta} \sin{\varphi} \frac{\partial}{\partial \varphi}
+    \left(\sin{\varphi} \frac{\partial}{\partial \varphi}\right)
+    - \cos^2{\varphi} \frac{\partial^2}{\partial \theta^2}
+\]
+
+\[
+    + \sin{\varphi} \cot{\theta}\frac{\partial}{\partial \varphi}
+    \left(\cos{\varphi} \frac{\partial}{\partial \theta}\right)
+    + \sin{\varphi} \cos{\varphi} \frac{\partial}{\partial \theta}
+    \left(\cot{\theta} \frac{\partial}{\partial \varphi}\right)
+\]
+
+\[
+    L_z^2 = - \frac{\partial^2}{\partial \varphi^2}
+\]
+
+\[
+    \textbf{L}^2 = L_x^2 + L_y^2 + L_z^2
+\]
+
+\[
+    = - \cot^2{\theta} \cos{\varphi} \frac{\partial}{\partial \varphi}
+    \left(\cos{\varphi} \frac{\partial}{\partial \varphi}\right)
+    - \sin^2{\varphi} \frac{\partial^2}{\partial \theta^2}
+\]
+
+\[
+    - \cos{\varphi} \cot{\theta}\frac{\partial}{\partial \varphi}
+    \left(\sin{\varphi} \frac{\partial}{\partial \theta}\right)
+    - \sin{\varphi} \cos{\varphi} \frac{\partial}{\partial \theta}
+    \left(\cot{\theta}\frac{\partial}{\partial \varphi}\right)
+\]
+
+\[
+    - \cot^2{\theta} \sin{\varphi} \frac{\partial}{\partial \varphi}
+    \left(\sin{\varphi} \frac{\partial}{\partial \varphi}\right)
+    - \cos^2{\varphi} \frac{\partial^2}{\partial \theta^2}
+\]
+
+\[
+    + \sin{\varphi} \cot{\theta}\frac{\partial}{\partial \varphi}
+    \left(\cos{\varphi} \frac{\partial}{\partial \theta}\right)
+    + \sin{\varphi} \cos{\varphi} \frac{\partial}{\partial \theta}
+    \left(\cot{\theta} \frac{\partial}{\partial \varphi}\right)
+    - \frac{\partial^2}{\partial \varphi^2}
+\]
+
+\[
+    = - \cot^2{\theta}
+    \left(
+    \cos{\varphi} \frac{\partial}{\partial \varphi}
+    \left(
+        \cos{\varphi} \frac{\partial}{\partial \varphi}
+        \right)
+    + \sin{\varphi} \frac{\partial}{\partial \theta}
+    \left(
+        \sin{\varphi} \frac{\partial}{\partial \varphi}
+        \right)
+    \right)
+    - \frac{\partial^2}{\partial \theta^2}
+    - \frac{\partial^2}{\partial \varphi^2}
+\]
+
+\[
+    + \cot{\theta}
+    \left(
+    \sin{\varphi} \frac{\partial}{\partial \varphi}
+    \left(\cos{\varphi} \frac{\partial}{\partial \theta}\right)
+    - \cos{\varphi} \frac{\partial}{\partial \varphi}
+    \left(\sin{\varphi} \frac{\partial}{\partial \theta}\right)
+    \right)
+\] % TODO: finish this
 
 \bibliographystyle{plain}
 \bibliography{references}
