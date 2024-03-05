@@ -7,6 +7,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{enumitem}
+\usepackage[thicklines]{cancel}
 
 \hypersetup{
     colorlinks,
@@ -44,11 +45,11 @@ This \(u-, v-, z-\)system is orthogonal.
           surfaces.
     \item Sketch the system in the \(x y-\)plane showing the intersections of surfaces of constant
           u and surfaces of constant v with the \(x y-\)plane.
-    \item Indicate the directions of the unit vectors \(\hat{\textbf{e}}_u\) and \(\hat{\textbf{e}}_v\)
+    \item Indicate the directions of the unit vectors \(\hat{\mathbf{e}}_u\) and \(\hat{\mathbf{e}}_v\)
           in all four quadrants.
-    \item Finally, is this \(u-, v-, z-\)system right-handed \((\hat{\textbf{e}}_u \times \hat{\textbf{e}}_v
-          = +\hat{\textbf{e}}_z )\) or left-handed \((\hat{\textbf{e}}_u \times
-          \hat{\textbf{e}}_v = -\hat{\textbf{e}}_z )\)?
+    \item Finally, is this \(u-, v-, z-\)system right-handed \((\hat{\mathbf{e}}_u \times \hat{\mathbf{e}}_v
+          = +\hat{\mathbf{e}}_z )\) or left-handed \((\hat{\mathbf{e}}_u \times
+          \hat{\mathbf{e}}_v = -\hat{\mathbf{e}}_z )\)?
 \end{enumerate}
 
 \subsection{Solution}
@@ -105,12 +106,12 @@ This \(u-, v-, z-\)system is orthogonal.
 \]
 
 \[
-    \hat{\textbf{e}}_u = \frac{\nabla u}{|\nabla u|} = \frac{y  \hat{\dot{\imath}}
+    \hat{\mathbf{e}}_u = \frac{\nabla u}{|\nabla u|} = \frac{y  \hat{\dot{\imath}}
         + x  \hat{\dot{\jmath}}}{\sqrt{x^2 + y^2}}
 \]
 
 \[
-    \hat{\textbf{e}}_v = \frac{\nabla v}{|\nabla v|} = \frac{2x  \hat{\dot{\imath}}
+    \hat{\mathbf{e}}_v = \frac{\nabla v}{|\nabla v|} = \frac{2x  \hat{\dot{\imath}}
         - 2y  \hat{\dot{\jmath}}}{\sqrt{4x^2 + 4y^2}}
 \]
 
@@ -127,7 +128,7 @@ This \(u-, v-, z-\)system is orthogonal.
 \subsubsection{d}
 
 \[
-    \hat{\textbf{e}}_u \times \hat{\textbf{e}}_v =
+    \hat{\mathbf{e}}_u \times \hat{\mathbf{e}}_v =
     \begin{vmatrix}
         \hat{\dot{\imath}}         & \hat{\dot{\jmath}}          & \hat{k} \\
         \frac{y}{\sqrt{x^2 + y^2}} & \frac{x}{\sqrt{x^2 + y^2}}  & 0       \\
@@ -148,33 +149,33 @@ From the previous result, we can see that the coordinate system is left-handed.
 
 \subsection{Problem}
 
-With \(\hat{\textbf{e}}_1\) a unit vector in the direction of increasing \(q_1\), show that
+With \(\hat{\mathbf{e}}_1\) a unit vector in the direction of increasing \(q_1\), show that
 \bigskip
 
 \begin{enumerate}[label= \textbf{(\alph*)}]
     \item
           \(
-          \nabla \cdot \hat{\textbf{e}}_1 =
+          \nabla \cdot \hat{\mathbf{e}}_1 =
           \frac{1}{h_1 h_2 h_3} \frac{\partial \left(h_2 h_3\right)}{\partial q_1}
           \)
 
     \item
           \(
-          \nabla \times \hat{\textbf{e}}_1 = \frac{1}{h_1}
+          \nabla \times \hat{\mathbf{e}}_1 = \frac{1}{h_1}
           \left[
-              \hat{\textbf{e}}_2 \frac{1}{h_3} \frac{\partial h_1}{\partial q_3}
-              - \hat{\textbf{e}}_3  \frac{1}{h_2}  \frac{\partial h_1}{\partial q_2}
+              \hat{\mathbf{e}}_2 \frac{1}{h_3} \frac{\partial h_1}{\partial q_3}
+              - \hat{\mathbf{e}}_3  \frac{1}{h_2}  \frac{\partial h_1}{\partial q_2}
               \right]
           \)
 \end{enumerate}
 \bigskip
 
-Note that even though \(\hat{\textbf{e}}_1\) is a unit vector, its divergence and curl \textbf{do
+Note that even though \(\hat{\mathbf{e}}_1\) is a unit vector, its divergence and curl \textbf{do
     not necessarily vanish}.
 
 \subsection{Solution}
 
-\(\hat{\textbf{e}}_1 = \left\langle1, 0, 0\right\rangle \)
+\(\hat{\mathbf{e}}_1 = \left\langle1, 0, 0\right\rangle \)
 
 \subsubsection{a}
 
@@ -188,7 +189,7 @@ Note that even though \(\hat{\textbf{e}}_1\) is a unit vector, its divergence an
 \]
 
 \[
-    \nabla \cdot \hat{\textbf{e}}_1 = \frac{1}{h_1 h_2 h_3}
+    \nabla \cdot \hat{\mathbf{e}}_1 = \frac{1}{h_1 h_2 h_3}
     \left[
         \frac{\partial}{\partial q_1}\left(1 * h_2 h_3\right)
         + \frac{\partial}{\partial q_2}\left(0 * h_1 h_3\right)
@@ -197,7 +198,7 @@ Note that even though \(\hat{\textbf{e}}_1\) is a unit vector, its divergence an
 \]
 
 \[
-    \nabla \cdot \hat{\textbf{e}}_1 = \frac{1}{h_1 h_2 h_3} \frac{\partial}{\partial q_1}\left(h_2 h_3\right)
+    \nabla \cdot \hat{\mathbf{e}}_1 = \frac{1}{h_1 h_2 h_3} \frac{\partial}{\partial q_1}\left(h_2 h_3\right)
 \]
 
 \subsubsection{b}
@@ -205,34 +206,34 @@ Note that even though \(\hat{\textbf{e}}_1\) is a unit vector, its divergence an
 \[
     \nabla \times \textbf{V} = \frac{1}{h_1 h_2 h_3}
     \begin{vmatrix}
-        \hat{\textbf{e}}_1 h_1        & \hat{\textbf{e}}_2 h_2        & \hat{\textbf{e}}_3 h_3        \\
+        \hat{\mathbf{e}}_1 h_1        & \hat{\mathbf{e}}_2 h_2        & \hat{\mathbf{e}}_3 h_3        \\
         \frac{\partial}{\partial q_1} & \frac{\partial}{\partial q_2} & \frac{\partial}{\partial q_3} \\
         h_1 V_1                       & h_2 V_2                       & h_3 V_3                       \\
     \end{vmatrix}
 \]
 
 \[
-    \nabla \times \hat{\textbf{e}}_1 = \frac{1}{h_1 h_2 h_3}
+    \nabla \times \hat{\mathbf{e}}_1 = \frac{1}{h_1 h_2 h_3}
     \begin{vmatrix}
-        \hat{\textbf{e}}_1 h_1        & \hat{\textbf{e}}_2 h_2        & \hat{\textbf{e}}_3 h_3        \\
+        \hat{\mathbf{e}}_1 h_1        & \hat{\mathbf{e}}_2 h_2        & \hat{\mathbf{e}}_3 h_3        \\
         \frac{\partial}{\partial q_1} & \frac{\partial}{\partial q_2} & \frac{\partial}{\partial q_3} \\
         h_1*1                         & h_2*0                         & h_3*0                         \\
     \end{vmatrix}
 \]
 
 \[
-    \nabla \times \hat{\textbf{e}}_1 = \frac{1}{h_1 h_2 h_3}
+    \nabla \times \hat{\mathbf{e}}_1 = \frac{1}{h_1 h_2 h_3}
     \left(
-    \hat{\textbf{e}}_2 h_2 \frac{\partial h_1}{\partial q_3}
-    - \hat{\textbf{e}}_3 h_3 \frac{\partial h_1}{\partial q_2}
+    \hat{\mathbf{e}}_2 h_2 \frac{\partial h_1}{\partial q_3}
+    - \hat{\mathbf{e}}_3 h_3 \frac{\partial h_1}{\partial q_2}
     \right)
 \]
 
 \[
-    \nabla \times \hat{\textbf{e}}_1 = \frac{1}{h_1}
+    \nabla \times \hat{\mathbf{e}}_1 = \frac{1}{h_1}
     \left[
-        \hat{\textbf{e}}_2 \frac{1}{h_3} \frac{\partial h_1}{\partial q_3}
-        - \hat{\textbf{e}}_3  \frac{1}{h_2}  \frac{\partial h_1}{\partial q_2}
+        \hat{\mathbf{e}}_2 \frac{1}{h_3} \frac{\partial h_1}{\partial q_3}
+        - \hat{\mathbf{e}}_3  \frac{1}{h_2}  \frac{\partial h_1}{\partial q_2}
         \right]
 \]
 
@@ -240,13 +241,13 @@ Note that even though \(\hat{\textbf{e}}_1\) is a unit vector, its divergence an
 
 \subsection{Problem}
 
-Show that a set of orthogonal unit vectors \(\hat{\textbf{e}}_i\) may be defined by
+Show that a set of orthogonal unit vectors \(\hat{\mathbf{e}}_i\) may be defined by
 
 \[
-    \hat{\textbf{e}}_i = \frac{1}{h_i} \frac{\partial \textbf{r}}{\partial q_i}
+    \hat{\mathbf{e}}_i = \frac{1}{h_i} \frac{\partial \textbf{r}}{\partial q_i}
 \]
 
-In particular, show that \(\hat{\textbf{e}}_i \cdot \hat{\textbf{e}}_i = 1\)  leads to an expression for
+In particular, show that \(\hat{\mathbf{e}}_i \cdot \hat{\mathbf{e}}_i = 1\)  leads to an expression for
 \(h_i\) in agreement with
 
 \[
@@ -254,26 +255,26 @@ In particular, show that \(\hat{\textbf{e}}_i \cdot \hat{\textbf{e}}_i = 1\)  le
     + {\left(\frac{\partial y}{\partial q_i}\right)}^2 + {\left(\frac{\partial z}{\partial q_i}\right)}^2
 \]
 
-The above equation for \(\hat{\textbf{e}}_i\) may be taken as a starting point for deriving
+The above equation for \(\hat{\mathbf{e}}_i\) may be taken as a starting point for deriving
 
 \[
-    \frac{\partial \hat{\textbf{e}}_i}{\partial q_j}
-    = \hat{\textbf{e}}_j \frac{1}{h_i} \frac{\partial h_j}{\partial q_i}, \quad i \neq j
+    \frac{\partial \hat{\mathbf{e}}_i}{\partial q_j}
+    = \hat{\mathbf{e}}_j \frac{1}{h_i} \frac{\partial h_j}{\partial q_i}, \quad i \neq j
 \]
 
 \[
-    \frac{\partial \hat{\textbf{e}}_i}{\partial q_i}
-    = - \sum_{j \neq i} \hat{\textbf{e}}_j \frac{1}{h_j} \frac{\partial h_i}{\partial q_j}
+    \frac{\partial \hat{\mathbf{e}}_i}{\partial q_i}
+    = - \sum_{j \neq i} \hat{\mathbf{e}}_j \frac{1}{h_j} \frac{\partial h_i}{\partial q_j}
 \]
 
 \subsection{Solution}
 
 \[
-    \hat{\textbf{e}}_i = \frac{1}{h_i} \frac{\partial \textbf{r}}{\partial q_i}
+    \hat{\mathbf{e}}_i = \frac{1}{h_i} \frac{\partial \textbf{r}}{\partial q_i}
 \]
 
 \[
-    \hat{\textbf{e}}_i \cdot \hat{\textbf{e}}_j = \frac{1}{h_i h_j}
+    \hat{\mathbf{e}}_i \cdot \hat{\mathbf{e}}_j = \frac{1}{h_i h_j}
     \left(\frac{\partial \textbf{r}}{\partial q_i}\right)
     \cdot \left(\frac{\partial \textbf{r}}{\partial q_j}\right)  = \delta_{ij}
 \]
@@ -307,7 +308,7 @@ The above equation for \(\hat{\textbf{e}}_i\) may be taken as a starting point f
 \]
 
 \[
-    \hat{\textbf{e}}_i \cdot \hat{\textbf{e}}_j
+    \hat{\mathbf{e}}_i \cdot \hat{\mathbf{e}}_j
     = \frac{1}{h_i h_j} \frac{\partial x_k}{\partial q_i} \frac{\partial x_k}{\partial q_j} = \delta_{ij}
 \]
 
@@ -320,13 +321,13 @@ The above equation for \(\hat{\textbf{e}}_i\) may be taken as a starting point f
 \]
 
 \[
-    \because \frac{\partial (h_i \hat{\textbf{e}}_i)}{\partial q_j}
-    = \frac{\partial h_i}{\partial q_j} \hat{\textbf{e}}_i
-    + h_i \frac{\partial \hat{\textbf{e}}_i}{\partial q_j}
+    \because \frac{\partial (h_i \hat{\mathbf{e}}_i)}{\partial q_j}
+    = \frac{\partial h_i}{\partial q_j} \hat{\mathbf{e}}_i
+    + h_i \frac{\partial \hat{\mathbf{e}}_i}{\partial q_j}
 \]
 
 \[
-    \because \frac{\partial (h_i \hat{\textbf{e}}_i)}{\partial q_j}
+    \because \frac{\partial (h_i \hat{\mathbf{e}}_i)}{\partial q_j}
     = \frac{\partial}{\partial q_j} \left(\frac{\partial \textbf{r}}{\partial q_i}\right)
     = \frac{\partial^2 \textbf{r}}{\partial q_j \partial q_i}
 \]
@@ -341,63 +342,63 @@ The above equation for \(\hat{\textbf{e}}_i\) may be taken as a starting point f
 \]
 
 \[
-    = \frac{\partial (h_j \hat{\textbf{e}}_j)}{\partial q_i}
+    = \frac{\partial (h_j \hat{\mathbf{e}}_j)}{\partial q_i}
 \]
 
 \[
-    \therefore \frac{\partial h_i}{\partial q_j} \hat{\textbf{e}}_i
-    + h_i \frac{\partial \hat{\textbf{e}}_i}{\partial q_j}
-    = \frac{\partial h_j}{\partial q_i} \hat{\textbf{e}}_j
-    + h_j \frac{\partial \hat{\textbf{e}}_j}{\partial q_i}
+    \therefore \frac{\partial h_i}{\partial q_j} \hat{\mathbf{e}}_i
+    + h_i \frac{\partial \hat{\mathbf{e}}_i}{\partial q_j}
+    = \frac{\partial h_j}{\partial q_i} \hat{\mathbf{e}}_j
+    + h_j \frac{\partial \hat{\mathbf{e}}_j}{\partial q_i}
 \]
 
 \[
-    \because \frac{\partial \hat{\textbf{e}}_i}{\partial q_j} = f\left(q_j\right)  \hat{\textbf{e}}_j
+    \because \frac{\partial \hat{\mathbf{e}}_i}{\partial q_j} = f\left(q_j\right)  \hat{\mathbf{e}}_j
 \]
 
 We can now equate both pairs.
 
 \[
-    \therefore\frac{\partial \hat{\textbf{e}}_i}{\partial q_j}
-    = \frac{1}{h_i} \frac{\partial h_j}{\partial q_i} \hat{\textbf{e}}_j, \quad i \neq j
+    \therefore\frac{\partial \hat{\mathbf{e}}_i}{\partial q_j}
+    = \frac{1}{h_i} \frac{\partial h_j}{\partial q_i} \hat{\mathbf{e}}_j, \quad i \neq j
 \]
 
 \[
-    \hat{\textbf{e}}_i \cdot \hat{\textbf{e}}_j = \delta_{ij} \implies
-    \frac{\partial \left(\hat{\textbf{e}}_i \cdot \hat{\textbf{e}}_j\right) }{\partial q_k}
-    = \hat{\textbf{e}}_i \cdot \frac{\partial \hat{\textbf{e}}_j}{\partial q_k}
-    +  \frac{\partial \hat{\textbf{e}}_i}{\partial q_k} \cdot \hat{\textbf{e}}_j = 0
+    \hat{\mathbf{e}}_i \cdot \hat{\mathbf{e}}_j = \delta_{ij} \implies
+    \frac{\partial \left(\hat{\mathbf{e}}_i \cdot \hat{\mathbf{e}}_j\right) }{\partial q_k}
+    = \hat{\mathbf{e}}_i \cdot \frac{\partial \hat{\mathbf{e}}_j}{\partial q_k}
+    +  \frac{\partial \hat{\mathbf{e}}_i}{\partial q_k} \cdot \hat{\mathbf{e}}_j = 0
 \]
 
 \[
-    \hat{\textbf{e}}_i \cdot \frac{\partial \hat{\textbf{e}}_j}{\partial q_k}
-    = -\frac{\partial \hat{\textbf{e}}_i}{\partial q_k} \cdot \hat{\textbf{e}}_j
+    \hat{\mathbf{e}}_i \cdot \frac{\partial \hat{\mathbf{e}}_j}{\partial q_k}
+    = -\frac{\partial \hat{\mathbf{e}}_i}{\partial q_k} \cdot \hat{\mathbf{e}}_j
 \]
 
 We are interested in the case where \(i = k\).
 
 \[
-    \hat{\textbf{e}}_i \cdot \frac{\partial \hat{\textbf{e}}_j}{\partial q_i}
-    = -\frac{\partial \hat{\textbf{e}}_i}{\partial q_i} \cdot \hat{\textbf{e}}_j
+    \hat{\mathbf{e}}_i \cdot \frac{\partial \hat{\mathbf{e}}_j}{\partial q_i}
+    = -\frac{\partial \hat{\mathbf{e}}_i}{\partial q_i} \cdot \hat{\mathbf{e}}_j
 \]
 
 From this relation, we can derive two statements.
 
 \[
-    \hat{\textbf{e}}_i \cdot \frac{\partial \hat{\textbf{e}}_i}{\partial q_i} = 0
+    \hat{\mathbf{e}}_i \cdot \frac{\partial \hat{\mathbf{e}}_i}{\partial q_i} = 0
 \]
 
-Which tells us that the change of \(\hat{\textbf{e}}_i\) in the \(q_i\) direction is
-perpendicular to \(\hat{\textbf{e}}_i\) (if it exists).
+Which tells us that the change of \(\hat{\mathbf{e}}_i\) in the \(q_i\) direction is
+perpendicular to \(\hat{\mathbf{e}}_i\) (if it exists).
 
 \[
-    \hat{\textbf{e}}_j \cdot \frac{\partial \hat{\textbf{e}}_i}{\partial q_i}
-    = - \hat{\textbf{e}}_i \cdot \frac{\partial \hat{\textbf{e}}_j}{\partial q_i}, \quad i \neq j
+    \hat{\mathbf{e}}_j \cdot \frac{\partial \hat{\mathbf{e}}_i}{\partial q_i}
+    = - \hat{\mathbf{e}}_i \cdot \frac{\partial \hat{\mathbf{e}}_j}{\partial q_i}, \quad i \neq j
 \]
 
 \[
-    \hat{\textbf{e}}_j \cdot \frac{\partial \hat{\textbf{e}}_i}{\partial q_j}
-    = \frac{1}{h_i} \frac{\partial h_j}{\partial q_i} \hat{\textbf{e}}_j \cdot \hat{\textbf{e}}_j
+    \hat{\mathbf{e}}_j \cdot \frac{\partial \hat{\mathbf{e}}_i}{\partial q_j}
+    = \frac{1}{h_i} \frac{\partial h_j}{\partial q_i} \hat{\mathbf{e}}_j \cdot \hat{\mathbf{e}}_j
 \]
 
 \[
@@ -405,16 +406,16 @@ perpendicular to \(\hat{\textbf{e}}_i\) (if it exists).
 \]
 
 \[
-    \hat{\textbf{e}}_j \cdot \frac{\partial \hat{\textbf{e}}_i}{\partial q_i}
+    \hat{\mathbf{e}}_j \cdot \frac{\partial \hat{\mathbf{e}}_i}{\partial q_i}
     = - \frac{1}{h_j} \frac{\partial h_i}{\partial q_j}
 \]
 
-Now we just add all the components of \(\frac{\partial \hat{\textbf{e}}_i}{\partial q_i}\)
+Now we just add all the components of \(\frac{\partial \hat{\mathbf{e}}_i}{\partial q_i}\)
 together to get the final result.
 
 \[
-    \frac{\partial \hat{\textbf{e}}_i}{\partial q_i}
-    = - \sum_{j \neq i} \hat{\textbf{e}}_j \frac{1}{h_j} \frac{\partial h_i}{\partial q_j}
+    \frac{\partial \hat{\mathbf{e}}_i}{\partial q_i}
+    = - \sum_{j \neq i} \hat{\mathbf{e}}_j \frac{1}{h_j} \frac{\partial h_i}{\partial q_j}
 \]
 
 \section{3.10.28}\label{3.10.28}
@@ -454,9 +455,9 @@ Express \(\partial/\partial x, \partial/\partial y, \partial/\partial z\) in sph
 \]
 
 \[
-    \nabla = \hat{\textbf{e}}_1 \frac{1}{h_1} \frac{\partial}{\partial q_1}
-    + \hat{\textbf{e}}_2 \frac{1}{h_2} \frac{\partial}{\partial q_2}
-    + \hat{\textbf{e}}_3 \frac{1}{h_3} \frac{\partial}{\partial q_3}
+    \nabla = \hat{\mathbf{e}}_1 \frac{1}{h_1} \frac{\partial}{\partial q_1}
+    + \hat{\mathbf{e}}_2 \frac{1}{h_2} \frac{\partial}{\partial q_2}
+    + \hat{\mathbf{e}}_3 \frac{1}{h_3} \frac{\partial}{\partial q_3}
 \]
 
 \[
@@ -466,9 +467,9 @@ Express \(\partial/\partial x, \partial/\partial y, \partial/\partial z\) in sph
 \]
 
 \[
-    \nabla_{r \theta \varphi } = \hat{\textbf{e}}_r \frac{\partial}{\partial r}
-    + \hat{\textbf{e}}_\theta \frac{1}{r} \frac{\partial}{\partial \theta}
-    + \hat{\textbf{e}}_\varphi \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
+    \nabla_{r \theta \varphi } = \hat{\mathbf{e}}_r \frac{\partial}{\partial r}
+    + \hat{\mathbf{e}}_\theta \frac{1}{r} \frac{\partial}{\partial \theta}
+    + \hat{\mathbf{e}}_\varphi \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
 \]
 
 \[
@@ -478,13 +479,13 @@ Express \(\partial/\partial x, \partial/\partial y, \partial/\partial z\) in sph
 \[
     \hat{\dot{\imath}} \frac{\partial}{\partial x}
     + \hat{\dot{\jmath}} \frac{\partial}{\partial y}
-    +  \hat{k} \frac{\partial}{\partial z} = \hat{\textbf{e}}_r \frac{\partial}{\partial r}
-    + \hat{\textbf{e}}_\theta \frac{1}{r} \frac{\partial}{\partial \theta}
-    + \hat{\textbf{e}}_\varphi \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
+    +  \hat{k} \frac{\partial}{\partial z} = \hat{\mathbf{e}}_r \frac{\partial}{\partial r}
+    + \hat{\mathbf{e}}_\theta \frac{1}{r} \frac{\partial}{\partial \theta}
+    + \hat{\mathbf{e}}_\varphi \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
 \]
 
 \[
-    \hat{\textbf{e}}_r = \frac{\partial x_j}{\partial r} \hat{\varepsilon}_j
+    \hat{\mathbf{e}}_r = \frac{\partial x_j}{\partial r} \hat{\varepsilon}_j
     + x_j \frac{\partial \hat{\varepsilon}_j}{\partial r} = \frac{\partial x}{\partial r} \hat{\dot{\imath}}
     + \frac{\partial y}{\partial r} \hat{\dot{\jmath}} + \frac{\partial z}{\partial r} \hat{k}
 \]
@@ -495,12 +496,12 @@ Express \(\partial/\partial x, \partial/\partial y, \partial/\partial z\) in sph
 \]
 
 \[
-    \hat{\textbf{e}}_\theta = \cos{\theta} \cos{\varphi} \hat{\dot{\imath}}
+    \hat{\mathbf{e}}_\theta = \cos{\theta} \cos{\varphi} \hat{\dot{\imath}}
     + \cos{\theta} \sin{\varphi} \hat{\dot{\jmath}} - \sin{\theta} \hat{k}
 \]
 
 \[
-    \hat{\textbf{e}}_\varphi = -\sin{\varphi} \hat{\dot{\imath}} + \cos{\varphi} \hat{\dot{\jmath}}
+    \hat{\mathbf{e}}_\varphi = -\sin{\varphi} \hat{\dot{\imath}} + \cos{\varphi} \hat{\dot{\jmath}}
 \]
 
 \[
@@ -912,59 +913,140 @@ but Cartesian components for the cross product.
 \subsection{Solution}
 
 \[
-    \textbf{L} \times \textbf{L} = \left\lvert \begin{array}{ccc}
-        \hat{\dot{\imath}} & \hat{\dot{\jmath}} & \hat{k} \\
-        L_x                & L_y                & L_z     \\
-        L_x                & L_y                & L_z     \\
-    \end{array} \right\rvert
-\]
-
-\[
-    = \left(L_y L_z - L_z L_y\right) \hat{\dot{\imath}}
-    + \left(L_z L_x - L_x L_z\right) \hat{\dot{\jmath}}
-    + \left(L_x L_y - L_y L_x\right) \hat{k}
-\]
-
-\[
-    = [L_y, L_z] \hat{\dot{\imath}} + [L_z, L_x] \hat{\dot{\jmath}} + [L_x, L_y] \hat{k}
-\]
-
-\[
     \textbf{L} = -i \left(\textbf{r} \times \nabla\right)
     = i
     \left(
-    \hat{\textbf{e}}_\theta \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
-    - \hat{\textbf{e}}_\varphi \frac{\partial}{\partial \theta}
+    \hat{\mathbf{e}}_\theta \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
+    - \hat{\mathbf{e}}_\varphi \frac{\partial}{\partial \theta}
     \right)
 \]
 
 \[
-    L \times L =
+    \hat{\mathbf{e}}_r
+    = \sin{\theta} \cos{\varphi} \hat{\dot{\imath}} + \sin{\theta} \sin{\varphi} \hat{\dot{\jmath}}
+    + \cos{\theta} \hat{k}
+\]
+
+\[
+    \hat{\mathbf{e}}_\theta
+    = \cos{\theta} \cos{\varphi} \hat{\dot{\imath}}
+    + \cos{\theta} \sin{\varphi} \hat{\dot{\jmath}}
+    - \sin{\theta} \hat{k}
+\]
+
+\[
+    \hat{\mathbf{e}}_\varphi
+    = -\sin{\varphi} \hat{\dot{\imath}}
+    + \cos{\varphi} \hat{\dot{\jmath}}
+\]
+
+\[
+    \textbf{J}_{ij} = \frac{\partial \hat{\mathbf{e}}_i}{\partial \hat{\mathbf{e}}_j}
+\]
+
+\[
     \left(
-    \hat{\textbf{e}}_\theta \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
-    - \hat{\textbf{e}}_\varphi \frac{\partial}{\partial \theta}
+    \begin{array}{ccc}
+            \frac{\partial \hat{\mathbf{e}}_\theta}{\partial \theta}  & \frac{\partial \hat{\mathbf{e}}_\theta}{\partial \varphi}  \\
+            \frac{\partial \hat{\mathbf{e}}_\varphi}{\partial \theta} & \frac{\partial \hat{\mathbf{e}}_\varphi}{\partial \varphi}
+        \end{array}
+    \right)
+    = \left(
+    \begin{array}{ccc}
+            - \hat{\mathbf{e}}_r & \cos{\theta} \hat{\mathbf{e}}_\varphi                                  \\
+            0                    & - \sin \theta \hat{\mathbf{e}}_r - \cos \theta \hat{\mathbf{e}}_\theta
+        \end{array}
+    \right)
+\]
+
+\[
+    \textbf{L} \times \textbf{L} =
+    \left(
+    \hat{\mathbf{e}}_\theta \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
+    - \hat{\mathbf{e}}_\varphi \frac{\partial}{\partial \theta}
     \right) \times
     \left(
-    \hat{\textbf{e}}_\varphi \frac{\partial}{\partial \theta}
-    - \hat{\textbf{e}}_\theta \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
+    \hat{\mathbf{e}}_\varphi \frac{\partial}{\partial \theta}
+    - \hat{\mathbf{e}}_\theta \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
     \right)
 \]
 
 \[
-    \hat{\textbf{e}}_\theta \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
-    \times \hat{\textbf{e}}_\varphi \frac{\partial}{\partial \theta}
-    + \hat{\textbf{e}}_\theta \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
-    \times \hat{\textbf{e}}_\theta \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
+    = \hat{\mathbf{e}}_\theta \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
+    \times \hat{\mathbf{e}}_\varphi \frac{\partial}{\partial \theta}
+    - \hat{\mathbf{e}}_\theta \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
+    \times \hat{\mathbf{e}}_\theta \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
 \]
 
 \[
-    - \hat{\textbf{e}}_\varphi \frac{\partial}{\partial \theta}
-    \times \hat{\textbf{e}}_\varphi \frac{\partial}{\partial \theta}
-    + \hat{\textbf{e}}_\varphi \frac{\partial}{\partial \theta}
-    \times \hat{\textbf{e}}_\theta \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
-\] % TODO: Finish this
+    - \hat{\mathbf{e}}_\varphi \frac{\partial}{\partial \theta}
+    \times \hat{\mathbf{e}_\varphi} \frac{\partial}{\partial \theta}
+    + \hat{\mathbf{e}}_\varphi \frac{\partial}{\partial \theta}
+    \times \hat{\mathbf{e}}_\theta \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
+\]
 
+\[
+    =\left(\hat{\mathbf{e}}_\theta \times \frac{\partial \hat{\mathbf{e}}_\varphi}{\partial \varphi}\right)
+    \frac{1}{\sin{\theta}} \frac{\partial}{\partial \theta}
+    + \cancel{\left(\hat{\mathbf{e}}_\theta \times \hat{\mathbf{e}}_\varphi\right)
+        \frac{1}{\sin{\theta}} \frac{\partial^2}{\partial \varphi \partial \theta}}
+\]
 
+\[
+    - \left(\hat{\mathbf{e}}_\varphi \times \frac{\partial \hat{\mathbf{e}}_\theta}{\partial \varphi}\right)
+    \frac{1}{\sin^2{\theta}} \frac{\partial}{\partial \varphi}
+    - \cancelto{0}{\left(\hat{\mathbf{e}}_\theta \times \hat{\mathbf{e}}_\theta\right)
+    \frac{1}{\sin^2{\theta}} \frac{\partial^2}{\partial \varphi^2}}
+\]
+
+\[
+    - \cancelto{0}{\left(\hat{\mathbf{e}}_\varphi \times \frac{\partial \hat{\mathbf{e}}_\varphi}{\partial \theta}\right)
+        \frac{\partial}{\partial \theta}}
+    - \cancelto{0}{\left(\hat{\mathbf{e}}_\varphi \times \hat{\mathbf{e}}_\varphi\right)
+        \frac{\partial^2}{\partial \theta^2}}
+\]
+
+\[
+    + \left(\hat{\mathbf{e}}_\varphi \times \frac{\partial \hat{\mathbf{e}}_\theta}{\partial \theta}\right)
+    \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
+    + \cancel{\left(\hat{\mathbf{e}}_\varphi \times \hat{\mathbf{e}}_\theta\right)
+        \frac{1}{\sin{\theta}} \frac{\partial^2}{\partial \theta \partial \varphi}}
+\]
+
+\[
+    = - \left(
+    \hat{\mathbf{e}}_\theta \times \left(\sin \theta \hat{\mathbf{e}}_r + \cos \theta \hat{\mathbf{e}}_\theta\right)
+    \right)
+    \frac{1}{\sin{\theta}} \frac{\partial}{\partial \theta}
+\]
+
+\[
+    - \cancelto{0}{\left(\hat{\mathbf{e}}_\varphi \times \hat{\mathbf{e}}_\varphi\right)
+    \frac{\cos{\theta}}{\sin^2{\theta}} \frac{\partial}{\partial \varphi}}
+\]
+
+\[
+    - \left(\hat{\mathbf{e}}_\varphi \times \hat{\mathbf{e}}_r\right)
+    \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
+\]
+
+\[
+    = - \left(\hat{\mathbf{e}}_\theta \times \hat{\mathbf{e}}_r\right)
+    \frac{\partial}{\partial \theta}
+    + \cancelto{0}{\left(\hat{\mathbf{e}}_\theta \times \hat{\mathbf{e}}_\theta\right)
+    \cot{\theta} \frac{\partial}{\partial \theta}}
+    - \left(\hat{\mathbf{e}}_\varphi \times \hat{\mathbf{e}}_r\right)
+    \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
+\]
+
+\[
+    = \hat{\mathbf{e}}_\varphi \frac{\partial}{\partial \theta}
+    - \hat{\mathbf{e}}_\theta \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
+\]
+
+\[
+  = i \textbf{L}   
+\]
 
 \section{3.10.32}
 
@@ -973,9 +1055,9 @@ but Cartesian components for the cross product.
 \begin{enumerate}[label= \textbf{(\alph*)}]
     \item Using
           \[
-              \nabla \psi (r, \theta, \varphi) = \hat{\textbf{e}}_r \frac{\partial \psi}{\partial r}
-              + \hat{\textbf{e}}_\theta \frac{1}{r} \frac{\partial \psi}{\partial \theta}
-              + \hat{\textbf{e}}_\varphi \frac{1}{r \sin{\theta}} \frac{\partial \psi}{\partial \varphi}
+              \nabla \psi (r, \theta, \varphi) = \hat{\mathbf{e}}_r \frac{\partial \psi}{\partial r}
+              + \hat{\mathbf{e}}_\theta \frac{1}{r} \frac{\partial \psi}{\partial \theta}
+              + \hat{\mathbf{e}}_\varphi \frac{1}{r \sin{\theta}} \frac{\partial \psi}{\partial \varphi}
           \]
 
           show that
@@ -984,12 +1066,12 @@ but Cartesian components for the cross product.
               \textbf{L} = -i \left(\textbf{r} \times \nabla\right)
               = i
               \left(
-              \hat{\textbf{e}}_\theta \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
-              - \hat{\textbf{e}}_\varphi \frac{\partial}{\partial \theta}
+              \hat{\mathbf{e}}_\theta \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
+              - \hat{\mathbf{e}}_\varphi \frac{\partial}{\partial \theta}
               \right)
           \]
 
-    \item Resolving \(\hat{\textbf{e}}_\theta \) and \(\hat{\textbf{e}}_\varphi \)
+    \item Resolving \(\hat{\mathbf{e}}_\theta \) and \(\hat{\mathbf{e}}_\varphi \)
           into Cartesian components, determine \(L_x, L_y\), and \(L_z\) in terms of
           \(\theta , \varphi \), and their derivatives.
 
@@ -1014,32 +1096,32 @@ but Cartesian components for the cross product.
 \]
 
 \[
-    \textbf{r} = r \hat{\textbf{e}}_r
+    \textbf{r} = r \hat{\mathbf{e}}_r
 \]
 
 \[
-    \nabla_{r \theta \varphi } = \hat{\textbf{e}}_r \frac{\partial}{\partial r}
-    + \hat{\textbf{e}}_\theta \frac{1}{r} \frac{\partial}{\partial \theta}
-    + \hat{\textbf{e}}_\varphi \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
+    \nabla_{r \theta \varphi } = \hat{\mathbf{e}}_r \frac{\partial}{\partial r}
+    + \hat{\mathbf{e}}_\theta \frac{1}{r} \frac{\partial}{\partial \theta}
+    + \hat{\mathbf{e}}_\varphi \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
 \]
 
 \[
     \textbf{L} = -i
     \textbf{r} \times
     \left(
-    \hat{\textbf{e}}_r \frac{\partial}{\partial r}
-    + \hat{\textbf{e}}_\theta \frac{1}{r} \frac{\partial}{\partial \theta}
-    + \hat{\textbf{e}}_\varphi \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
+    \hat{\mathbf{e}}_r \frac{\partial}{\partial r}
+    + \hat{\mathbf{e}}_\theta \frac{1}{r} \frac{\partial}{\partial \theta}
+    + \hat{\mathbf{e}}_\varphi \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
     \right)
 \]
 
 \[
     = -i r
     \left(
-    \left(\hat{\textbf{e}}_r \times \hat{\textbf{e}}_r\right)  \frac{\partial}{\partial r}
-    + \left(\hat{\textbf{e}}_r \times \hat{\textbf{e}}_\theta\right)
+    \left(\hat{\mathbf{e}}_r \times \hat{\mathbf{e}}_r\right)  \frac{\partial}{\partial r}
+    + \left(\hat{\mathbf{e}}_r \times \hat{\mathbf{e}}_\theta\right)
     \frac{1}{r} \frac{\partial}{\partial \theta}
-    + \left(\hat{\textbf{e}}_r \times \hat{\textbf{e}}_\varphi\right)
+    + \left(\hat{\mathbf{e}}_r \times \hat{\mathbf{e}}_\varphi\right)
     \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
     \right)
 \]
@@ -1047,7 +1129,7 @@ but Cartesian components for the cross product.
 \(\because \) spherical polar coordinates are right-handed and orthonormal system.
 
 \[
-    \therefore \hat{\textbf{e}}_i \times \hat{\textbf{e}}_j = \varepsilon_{ijk} \hat{\textbf{e}}_k
+    \therefore \hat{\mathbf{e}}_i \times \hat{\mathbf{e}}_j = \varepsilon_{ijk} \hat{\mathbf{e}}_k
 \]
 
 where \(\varepsilon_{ijk}\) is the Levi-Civita symbol.
@@ -1058,9 +1140,9 @@ is an odd permutation, and 0 if any two indices are equal.
     \therefore \textbf{L} = -i r
     \left(
     0  \frac{\partial}{\partial r}
-    + 1 \hat{\textbf{e}}_\varphi
+    + 1 \hat{\mathbf{e}}_\varphi
     \frac{1}{r} \frac{\partial}{\partial \theta}
-    - 1 \hat{\textbf{e}}_\theta
+    - 1 \hat{\mathbf{e}}_\theta
     \frac{1}{r \sin{\theta}} \frac{\partial}{\partial \varphi}
     \right)
 \]
@@ -1068,22 +1150,22 @@ is an odd permutation, and 0 if any two indices are equal.
 \[
     = i
     \left(
-    \hat{\textbf{e}}_\theta \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
-    - \hat{\textbf{e}}_\varphi \frac{\partial}{\partial \theta}
+    \hat{\mathbf{e}}_\theta \frac{1}{\sin{\theta}} \frac{\partial}{\partial \varphi}
+    - \hat{\mathbf{e}}_\varphi \frac{\partial}{\partial \theta}
     \right)
 \]
 
 \subsubsection{b}
 
 \[
-    \hat{\textbf{e}}_\theta
+    \hat{\mathbf{e}}_\theta
     = \cos{\theta} \cos{\varphi} \hat{\dot{\imath}}
     + \cos{\theta} \sin{\varphi} \hat{\dot{\jmath}}
     - \sin{\theta} \hat{k}
 \]
 
 \[
-    \hat{\textbf{e}}_\varphi
+    \hat{\mathbf{e}}_\varphi
     = -\sin{\varphi} \hat{\dot{\imath}}
     + \cos{\varphi} \hat{\dot{\jmath}}
 \]
