@@ -30,11 +30,48 @@
 
 \subsection{Problem}
 
+Show that if all the components of any tensor of any rank vanish in one particular
+coordinate system, they vanish in all coordinate systems.
+
+\textit{Note}. This point takes on special importance in the four-dimensional (4-D) curved
+space of general relativity. If a quantity, expressed as a tensor, exists in one coordinate
+system, it exists in all coordinate systems and is not just a consequence of a \textbf{choice}
+of a coordinate system (as are centrifugal and Coriolis forces in Newtonian mechanics).
+
 \subsection{Solution}
+
+The transformation law for a mixed tensor of arbitrary rank is given by
+
+\[
+    \textbf{T}^{\alpha^{\prime} \ldots}{ }_{\beta^{\prime}\ldots}
+    = \textbf{T}^{\alpha \ldots}{ }_{\beta \ldots}
+    \frac{\partial x^{\alpha^{\prime}}}{\partial x^\alpha}
+    \frac{\partial x^\beta}{\partial x^{\beta^{\prime}}} \cdots
+\]
+
+If all the components of a tensor vanish in one particular coordinate system, then
+the multiplication of the components by the transformation law will also vanish in
+the new coordinate system. Therefore, the components of the tensor will vanish
+in all coordinate systems.
+
+\[
+    \textbf{0} = \textbf{0} \frac{\partial x^{\alpha^{\prime}}}{\partial x^\alpha}
+    \frac{\partial x^\beta}{\partial x^{\beta^{\prime}}} \cdots
+\]
 
 \section{4.1.2}
 
 \subsection{Problem}
+
+The components of tensor A are equal to the corresponding components of tensor B in
+one particular coordinate system denoted, by the superscript 0; that is,
+
+\[
+    \textbf{A}^0_{ij} = \textbf{B}^0_{ij}.
+\]
+
+Show that tensor A is equal to tensor B, \(\textbf{A}_{ij} = \textbf{B}_{ij}\), in all
+coordinate systems.
 
 \subsection{Solution}
 
@@ -42,11 +79,35 @@
 
 \subsection{Problem}
 
+The 4-D fourth-rank Riemann-Christoffel curvature tensor of general relativity,
+\(\textbf{R}_{iklm}\), satisfies the symmetry relations
+
+\[
+    \textbf{R}_{iklm} = - \textbf{R}_{ikml} = - \textbf{R}_{klim}
+\]
+
+With the indices running from 0 to 3, show that the number of independent components
+is reduced from 256 to 36 and that the condition
+
+\[
+    \textbf{R}_{iklm} = \textbf{R}_{lmik}
+\]
+
+further reduces the number of independent components to 21. Finally, if the components
+satisfy an identity \(\textbf{R}_{iklm} + \textbf{R}_{ilmk} + \textbf{R}_{imkl} = 0\),
+show that the number of independent components is reduced to 20.
+
+\textit{Note}. The final three-term identity furnishes new
+information only if all four indices are different.
+
 \subsection{Solution}
 
 \section{4.1.6}
 
 \subsection{Problem}
+
+\(\textbf{T}_{iklm}\) is antisymmetric with respect to all pairs of indices. How many
+independent component has it (in 3-D space)?
 
 \subsection{Solution}
 
@@ -54,17 +115,46 @@
 
 \subsection{Problem}
 
+If \(\textbf{T}_{\ldots i}\) is a tensor of rank n, show that
+\(\partial \textbf{T}_{\ldots i} / \partial x^j\) is a tensor of rank \(n + 1\)
+(Cartesian coordinates).
+
+\textit{Note}. In non-Cartesian coordinate systems the coefficients \(a_{ij}\) are, in general,
+functions of the coordinates, and the derivatives the components of a tensor of rank \(n\) do
+not form a tensor except in the special case \(n = 0\). In this case the derivative does yield a
+covariant vector (tensor of rank 1).
+
 \subsection{Solution}
 
 \section{4.1.8}
 
 \subsection{Problem}
 
+If \(\textbf{T}_{ijk\ldots}\) is a tensor of rank \(n\), show that
+\(\sum_j \partial \textbf{T}_{ijk\ldots}/\partial x^j\) is a tensor of rank \(n - 1\)
+(Cartesian coordinates).
+
 \subsection{Solution}
 
 \section{4.1.9}
 
 \subsection{Problem}
+
+The operator
+
+\[
+    \nabla^2 - \frac{1}{c^2} \frac{\partial^2}{\partial t^2}
+\]
+
+may be written as
+
+\[
+    \sum^4_{i = 1} \frac{\partial^2}{\partial x^2_i},
+\]
+
+using \(x_4 = ict\). This is the 4-D Laplacian, sometimes called the d'Alember\-tian and denoted
+by \(\Box^2\). Show that it is a \textbf{scalar} operator, that is, invariant under Lorentz
+transformations, i.e., under rotations in the space of vectors \((x^1, x^2, x^3, x^4)\).
 
 \subsection{Solution}
 
