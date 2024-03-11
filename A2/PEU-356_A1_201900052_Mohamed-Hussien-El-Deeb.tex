@@ -45,10 +45,10 @@ of a coordinate system (as are centrifugal and Coriolis forces in Newtonian mech
 The transformation law for a mixed tensor of arbitrary rank is given by
 
 \[
-    \textbf{T}^{\alpha^{\prime} \ldots}{ }_{\beta^{\prime}\ldots}
-    = \textbf{T}^{\alpha \ldots}{ }_{\beta \ldots}
-    \frac{\partial x^{\alpha^{\prime}}}{\partial x^\alpha}
-    \frac{\partial x^\beta}{\partial x^{\beta^{\prime}}} \cdots
+    {\left(\textbf{T}^\prime\right)}^{\alpha \ldots}{ }_{\beta \ldots}
+    = \textbf{T}^{i \ldots}{ }_{j \ldots}
+    \frac{\partial {\left(x^\prime\right)}^\alpha}{\partial x^i}
+    \frac{\partial x^j}{\partial {\left(x^\prime\right)}^\beta} \cdots
 \]
 
 If all the components of a tensor vanish in one particular coordinate system, then
@@ -57,8 +57,9 @@ the new coordinate system. Therefore, the components of the tensor will vanish
 in all coordinate systems.
 
 \[
-    \textbf{0} = \textbf{0} \frac{\partial x^{\alpha^{\prime}}}{\partial x^\alpha}
-    \frac{\partial x^\beta}{\partial x^{\beta^{\prime}}} \cdots
+    \textbf{0} = \textbf{0}
+    \frac{\partial {\left(x^\prime\right)}^\alpha}{\partial x^i}
+    \frac{\partial x^j}{\partial {\left(x^\prime\right)}^\beta} \cdots
 \]
 
 \newpage
@@ -78,6 +79,41 @@ Show that tensor \textbf{A} is equal to tensor \textbf{B},
 \(\textbf{A}_{ij} = \textbf{B}_{ij}\), in all coordinate systems.
 
 \subsection{Solution}
+
+The transformation law for a covariant tensor of second rank is given by
+
+\[
+    \textbf{A}^0_{ij} =
+    \frac{\partial x^\alpha}{\partial {\left(x^0\right)}^i}
+    \frac{\partial x^\beta}{\partial {\left(x^0\right)}^j}
+    \textbf{A}_{\alpha \beta}
+\]
+
+\[
+    \textbf{B}^0_{ij} =
+    \frac{\partial x^\alpha}{\partial {\left(x^0\right)}^i}
+    \frac{\partial x^\beta}{\partial {\left(x^0\right)}^j}
+    \textbf{B}_{\alpha \beta}
+\]
+
+\[
+    \because \textbf{A}^0_{ij} = \textbf{B}^0_{ij}
+\]
+
+\[
+    \therefore
+    \frac{\partial x^\alpha}{\partial {\left(x^0\right)}^i}
+    \frac{\partial x^\beta}{\partial {\left(x^0\right)}^j}
+    \textbf{A}_{\alpha \beta} =
+    \frac{\partial x^\alpha}{\partial {\left(x^0\right)}^i}
+    \frac{\partial x^\beta}{\partial {\left(x^0\right)}^j}
+    \textbf{B}_{\alpha \beta}
+\]
+
+\[
+    \implies \textbf{A}_{\alpha \beta} = \textbf{B}_{\alpha \beta} \equiv
+    \implies \textbf{A}_{ij} = \textbf{B}_{ij}
+\]
 
 \newpage
 \section{4.1.5}
