@@ -27,6 +27,9 @@
 \tableofcontents
 \hypersetup{linkcolor=RoyalBlue4}
 
+\newcommand*{\Perm}[2]{{}^{#1}\!P_{#2}}
+\newcommand*{\Comb}[2]{{}^{#1} C_{#2}}
+
 \newpage
 \section{4.1.1}
 
@@ -124,7 +127,7 @@ The 4-D fourth-rank Riemann-Christoffel curvature tensor of general relativity,
 \(\textbf{R}_{iklm}\), satisfies the symmetry relations
 
 \[
-    \textbf{R}_{iklm} = - \textbf{R}_{ikml} = - \textbf{R}_{klim}
+    \textbf{R}_{iklm} = - \textbf{R}_{ikml} = - \textbf{R}_{kilm}
 \]
 
 With the indices running from 0 to 3, show that the number of independent components
@@ -143,7 +146,61 @@ information only if all four indices are different.
 
 \subsection{Solution}
 
+Given identities,
 
+\[
+    \label{e1} \textbf{[1]} \quad \textbf{R}_{iklm} = - \textbf{R}_{kilm}
+\]
+
+\[
+    \label{e2} \textbf{[2]} \quad \textbf{R}_{iklm} = - \textbf{R}_{ikml}
+\]
+
+\[
+    \label{e3} \textbf{[3]} \quad \textbf{R}_{iklm} = \textbf{R}_{lmik}
+\]
+
+\[
+    \label{e4} \textbf{[4]} \quad \textbf{R}_{iklm} = - (\textbf{R}_{ilmk} + \textbf{R}_{imkl})
+\]
+
+Number of dimensions,
+
+\[
+    n = 4
+\]
+
+General number of indices,
+
+\[
+    n^4 = 4^4 = 256
+\]
+
+We could treat \(\textbf{R}_{iklm}\) as a 4-D matrix of 4-D matrices,
+
+\[
+    \textbf{R}_{iklm}
+    \equiv \textbf{R}_{AB} \quad \text{where} \quad A_{ik} \quad \text{and} \quad B_{lm}
+\]
+
+Each of the 4-D matrices \(A, B\) is antisymmetric and thus has 6 independent components, this follows
+from identities [\hyperref[e1]{1}] and [\hyperref[e2]{2}],
+
+\[
+    N(A) = N(B) = N = n(n-1)/2 = 4(4-1)/2 = 6
+\]
+
+If we stop here we get \(N(A) * N(B) = 6 * 6 = 36\) independent components. However, we can further reduce the number
+of independent components by using identity [\hyperref[e3]{3}],
+
+\[
+    N[N+1]/2 = 6(6+1)/2 = 21
+\]
+
+Since the final identity [\hyperref[e4]{4}] furnishes new information only if all four indices are different we need to only
+consider the \(\Comb{4}{4} = 1\) constraint.
+
+Subtracting that from 21 results in a final count of 20 independent components.
 
 \newpage
 \section{4.1.6}
@@ -165,6 +222,9 @@ independent component has it (in 3-D space)?
     = \textbf{T}_{ikml}
 \]
 
+Since we are in 3-D space, a 4th rank tensor is bound to have a repeated index which results in
+forcing the whole tensor to be 0 meaning that we have 0 independent components.
+
 \newpage
 \section{4.1.7}
 
@@ -181,7 +241,65 @@ covariant vector (tensor of rank 1).
 
 \subsection{Solution}
 
+\[
+    {\left(\textbf{T}^\prime\right)}_{\ldots i}
+    = \underbrace{\cdots
+        \frac{\partial x^\alpha}{\partial {\left(x^\prime\right)}^i}}_n
+    \textbf{T}_{\ldots \alpha}
+\]
 
+\[
+    \frac{\partial \left({\left(\textbf{T}^\prime\right)}_{\ldots i}\right)}{\partial {\left(x^\prime\right)}^j}
+    = \frac{\partial \left(
+        \cdots
+        \frac{\partial x^\alpha}{\partial {\left(x^\prime\right)}^i}
+        \textbf{T}_{\ldots \alpha}
+        \right)}{\partial {\left(x^\prime\right)}^j}
+    = \cdots
+    \frac{\partial x^\alpha}{\partial {\left(x^\prime\right)}^i}
+    \frac{\partial \left(
+        \textbf{T}_{\ldots \alpha}
+        \right)}{\partial {\left(x^\prime\right)}^j}
+    + \frac{\partial \left(
+        \cdots
+        \frac{\partial x^\alpha}{\partial {\left(x^\prime\right)}^i}
+        \right)}{\partial {\left(x^\prime\right)}^j}
+    \textbf{T}_{\ldots \alpha}
+\]
+
+Since we are in Cartesian \(\frac{\partial x^i}{\partial x^j} = \delta^i_j\),
+
+\[
+    = \cdots
+    \frac{\partial x^\alpha}{\partial {\left(x^\prime\right)}^i}
+    \frac{\partial x^\beta}{\partial {\left(x^\prime\right)}^j}
+    \frac{\partial \left(
+        \textbf{T}_{\ldots \alpha}
+        \right)}{\partial x^\beta}
+    +
+    \frac{\partial x^\beta}{\partial {\left(x^\prime\right)}^j}
+    \underbrace{\frac{\partial \left(
+            \cdots
+            \frac{\partial x^\alpha}{\partial {\left(x^\prime\right)}^i}
+            \right)}{\partial x^\beta}
+    }_{
+        \cancelto{0}{\cdots + \cdots
+            \frac{\partial}{\partial {\left(x^\prime\right)}^i}
+            \left(\frac{\partial x^\alpha}{\partial x^\beta}\right)}
+    }
+    \textbf{T}_{\ldots \alpha}
+\]
+
+\[
+    \frac{\partial \left({\left(\textbf{T}^\prime\right)}_{\ldots i}\right)}{\partial {\left(x^\prime\right)}^j}
+    = \underbrace{
+        \cdots
+        \frac{\partial x^\alpha}{\partial {\left(x^\prime\right)}^i}
+        \frac{\partial x^\beta}{\partial {\left(x^\prime\right)}^j}}_{n + 1}
+    \frac{\partial \left(
+        \textbf{T}_{\ldots \alpha}
+        \right)}{\partial x^\beta}
+\]
 
 \newpage
 \section{4.1.8}
@@ -193,6 +311,87 @@ If \(\textbf{T}_{ijk\ldots}\) is a tensor of rank \(n\), show that
 (Cartesian coordinates).
 
 \subsection{Solution}
+
+\[
+    {\left(\textbf{T}^\prime\right)}_{ijk \ldots}
+    = \underbrace{
+        \frac{\partial x^\alpha}{\partial {\left(x^\prime\right)}^i}
+        \frac{\partial x^\beta}{\partial {\left(x^\prime\right)}^j}
+        \frac{\partial x^\gamma}{\partial {\left(x^\prime\right)}^k}
+        \cdots
+    }_n
+    \textbf{T}_{\alpha \beta \gamma \ldots}
+\]
+
+\[
+    \sum_j
+    \frac
+    {\partial \left({\left(\textbf{T}^\prime\right)}_{ijk \ldots}\right)}
+    {\partial {\left(x^\prime\right)}^j}
+    = \sum_j
+    \frac
+    {\partial \left(
+        \frac{\partial x^\alpha}{\partial {\left(x^\prime\right)}^i}
+        \frac{\partial x^\beta}{\partial {\left(x^\prime\right)}^j}
+        \frac{\partial x^\gamma}{\partial {\left(x^\prime\right)}^k}
+        \cdots
+        \textbf{T}_{\alpha \beta \gamma \ldots}\right)}
+    {\partial {\left(x^\prime\right)}^j}
+\]
+
+\[
+    = \sum_j
+    \left(
+    \frac{\partial x^\alpha}{\partial {\left(x^\prime\right)}^i}
+    \frac{\partial x^\beta}{\partial {\left(x^\prime\right)}^j}
+    \frac{\partial x^\gamma}{\partial {\left(x^\prime\right)}^k}
+    \cdots \frac
+    {\partial \left(\textbf{T}_{\alpha \beta \gamma \ldots}\right)}
+    {\partial {\left(x^\prime\right)}^j}
+    + \cancelto{0}{\frac{\partial
+            \left(
+            \frac{\partial x^\alpha}{\partial {\left(x^\prime\right)}^i}
+            \frac{\partial x^\beta}{\partial {\left(x^\prime\right)}^j}
+            \frac{\partial x^\gamma}{\partial {\left(x^\prime\right)}^k}
+            \cdots
+            \right)}
+        {\partial {\left(x^\prime\right)}^j}}
+    \textbf{T}_{\alpha \beta \gamma \ldots}
+    \right)
+\]
+
+The second term was cancelled using the same argument from the previous question,
+
+\[
+    \sum_j
+    \frac
+    {\partial \left({\left(\textbf{T}^\prime\right)}_{ijk \ldots}\right)}
+    {\partial {\left(x^\prime\right)}^j}
+    = \frac{\partial x^\alpha}{\partial {\left(x^\prime\right)}^i}
+    \frac{\partial x^\gamma}{\partial {\left(x^\prime\right)}^k}
+    \cdots
+    \sum_j
+    \left(\cancelto{\delta^\eta_j}{\sum_\eta
+    \frac{\partial x^\beta}{\partial {\left(x^\prime\right)}^j}
+    \frac{\partial x^\eta}{\partial {\left(x^\prime\right)}^j}}\right)
+    \frac
+    {\partial \left(\textbf{T}_{\alpha \beta \gamma \ldots}\right)}
+    {\partial x^\eta}
+\]
+
+\[
+    \sum_j
+    \frac
+    {\partial \left({\left(\textbf{T}^\prime\right)}_{ijk \ldots}\right)}
+    {\partial {\left(x^\prime\right)}^j}
+    = \underbrace{\frac{\partial x^\alpha}{\partial {\left(x^\prime\right)}^i}
+    \frac{\partial x^\gamma}{\partial {\left(x^\prime\right)}^k}
+    \cdots}_{n - 1}
+    \sum_j
+    \frac
+    {\partial \left(\textbf{T}_{\alpha \beta \gamma \ldots}\right)}
+    {\partial x^j}
+\]
 
 \newpage
 \section{4.1.9}
@@ -208,7 +407,7 @@ The operator
 may be written as
 
 \[
-    \sum^4_{i = 1} \frac{\partial^2}{\partial x^2_i},
+    \sum^4_{i = 1} \frac{\partial^2}{\partial {x_i}^2},
 \]
 
 using \(x_4 = ict\). This is the 4-D Laplacian, sometimes called the d'Alember\-tian and denoted
@@ -217,7 +416,29 @@ transformations, i.e., under rotations in the space of vectors \((x^1, x^2, x^3,
 
 \subsection{Solution}
 
+\[
+    \Box^2 = \sum^4_{i = 1} \frac{\partial^2}{\partial {x_i}^2}
+\]
 
+\[
+    \left(\Box^\prime\right)^2
+    = \sum^4_{i = 1} \frac{\partial^2}{\partial {{\left(x^\prime\right)}_i}^2}
+\]
+
+\[
+    = \sum^4_{i = 1}
+    \left(\cancelto{\delta^i_j}{\sum^4_{j = 1} \frac{\partial {x_j}}{\partial {{\left(x^\prime\right)}_i}}
+        \frac{\partial {x_j}}{\partial {{\left(x^\prime\right)}_i}}}\right)
+    \frac{\partial^2}{\partial {x_j}^2}
+\]
+
+\[
+    \left(\Box^\prime\right)^2
+    = \sum^4_{i = 1} \frac{\partial^2}{\partial {x_i}^2}
+    = \Box^2
+\]
+
+Another solution is to realize that \(\Box^2\) is \(\partial^\mu \cdot \partial_\mu = \left(\frac{1}{c} \frac{\partial}{\partial t},-\nabla\right) \cdot \left(\frac{1}{c} \frac{\partial}{\partial t}, \nabla\right)\)
 
 \newpage
 \bibliographystyle{plain}
