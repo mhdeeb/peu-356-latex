@@ -1,0 +1,178 @@
+\documentclass[12pt]{article}
+\usepackage[svgnames,x11names,table]{xcolor}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{esint}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage[thicklines]{cancel}
+
+\hypersetup{
+    colorlinks,
+    citecolor=blue,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=RoyalBlue4,
+}
+
+\title{PEU 356 Assignment 6}
+\author{Mohamed Hussien El-Deeb (201900052)}
+\date{\today}
+
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\hypersetup{linkcolor=RoyalBlue4}
+
+\newpage
+\section{Question 1}
+
+\subsection{Problem}
+
+(a) Given (in \(\mathbb{R}^3\) ) the basis \(\varphi_1=x, \varphi_2=y, \varphi_3=z\), consider the basis transformation \(x \rightarrow z, y \rightarrow y, z \rightarrow-x\). Find the \(3 \times 3\) matrix \(\cup \) for this transformation.
+
+(b) This transformation corresponds to a rotation of the coordinate axes. Identify the rotation and reconcile your transformation matrix with an appropriate matrix \(S(\alpha, \beta, \gamma)\) is of the form,
+
+\[
+    \begin{pmatrix}
+        \cos \gamma \cos \beta \cos \alpha-\sin \gamma \sin \alpha  & \cos \gamma \cos \beta \sin \alpha+\sin \gamma \cos \alpha  & -\cos \gamma \sin \beta \\
+        -\sin \gamma \cos \beta \cos \alpha-\cos \gamma \sin \alpha & -\sin \gamma \cos \beta \sin \alpha+\cos \gamma \cos \alpha & \sin \gamma \sin \beta  \\
+        \sin \beta \cos \alpha                                      & \sin \beta \sin \alpha                                      & \cos \beta
+    \end{pmatrix}
+\]
+
+(c) Form the column vector c representing (in the original basis) \(f=2 x-3 y+z\), find the result of applying \(U\) to \(c\), and show that this is consistent with the basis transformation of part (a).
+
+Note. You do not need to be able to form scalar products to handle this exercise; a knowledge of the linear relationship between the original and transformed functions is sufficient.
+
+\subsection{Solution}
+
+
+
+\newpage
+\section{Question 2}
+
+\subsection{Problem}
+
+The unitary transformation \(U\) that converts an orthonormal basis \(\left\{\varphi_i\right\}\) into the basis \(\left\{\varphi_i^{\prime}\right\}\) and the unitary transformation \(V\) that converts the basis \(\left\{\varphi_i^{\prime}\right\}\) into the basis \(\left\{\chi_i\right\}\) have matrix representations
+
+\[
+    \mathrm{U}=\left(\begin{array}{ccc}
+            i \sin \theta & \cos \theta   & 0 \\
+            -\cos \theta  & i \sin \theta & 0 \\
+            0             & 0             & 1
+        \end{array}\right), \quad \mathrm{V}=\left(\begin{array}{ccc}
+            1 & 0           & 0              \\
+            0 & \cos \theta & i \sin \theta  \\
+            0 & \cos \theta & -i \sin \theta
+        \end{array}\right) .
+\]
+
+Given the function \(f(x)=3 \varphi_1(x)-\varphi_2(x)-2 \varphi_3(x)\),
+
+(a) By applying \(\mathrm{U}\), form the vector representing \(f(x)\) in the \(\left\{\varphi_i^{\prime}\right\}\) basis and then by applying \(\mathrm{V}\) form the vector representing \(f(x)\) in the \(\left\{\chi_i\right\}\) basis. Use this result to write \(f(x)\) as a linear combination of the \(\chi_i\).
+
+(b) Form the matrix products UV and VU and then apply each to the vector representing \(f(x)\) in the \(\left\{\varphi_i\right\}\) basis. Verify that the results of these applications differ and that only one of them gives the result corresponding to part (a).
+
+\subsection{Solution}
+
+
+
+\newpage
+\section{Question 3}
+
+\subsection{Problem}
+
+(a) Using the two spin functions \(\varphi_1=\alpha\) and \(\varphi_2=\beta\) as an orthonormal basis (so \(\langle\alpha \mid \alpha\rangle=\langle\beta \mid \beta\rangle=1,\langle\alpha \mid \beta\rangle=0)\), and the relations
+
+\[
+    S_x \alpha=\frac{1}{2} \beta, \quad S_x \beta=\frac{1}{2} \alpha, \quad S_y \alpha=\frac{1}{2} i \beta, \quad S_y \beta=-\frac{1}{2} i \alpha, \quad S_z \alpha=\frac{1}{2} \alpha, \quad S_z \beta=-\frac{1}{2} \beta,
+\]
+
+construct the \(2 \times 2\) matrices of \(S_x, S_y\), and \(S_z\).
+(b) Taking now the basis \(\varphi_1^{\prime}=C(\alpha+\beta), \varphi_2^{\prime}=C(\alpha-\beta)\) :
+
+(i) Verify that \(\varphi_1^{\prime}\) and \(\varphi_2^{\prime}\) are orthogonal,
+
+(ii) Assign \(C\) a value that makes \(\varphi_1^{\prime}\) and \(\varphi_2^{\prime}\) normalized,
+
+(iii) Find the unitary matrix for the transformation \(\left\{\varphi_i\right\} \rightarrow\left\{\varphi_i^{\prime}\right\}\).
+
+(c) Find the matrices of \(S_x, S_y\), and \(S_z\) in the \(\left\{\varphi_i^{\prime}\right\}\) basis.
+
+\subsection{Solution}
+
+
+\newpage
+\section{Question 4}
+
+\subsection{Problem}
+
+For the basis \(\varphi_1=C x e^{-r^2}, \varphi_2=C y e^{-r^2}, \varphi_3=C z e^{-r^2}\), where \(r^2=x^2+y^2+z^2\), with the scalar product defined as an unweighted integral over \(\mathbb{R}^3\) and with \(C\) chosen to make the \(\varphi_i\) normalized:
+
+(a) Find the \(3 \times 3\) matrix of \(L_x=-i\left(y \frac{\partial}{\partial z}-z \frac{\partial}{\partial y}\right)\);
+
+(b) Using the transformation matrix \(\mathrm{U}=\left(\begin{array}{ccc}1 & 0 & 0 \\ 0 & 1 / \sqrt{2} & -i / \sqrt{2} \\ 0 & 1 / \sqrt{2} & i / \sqrt{2}\end{array}\right)\), find the transformed matrix of \(L_x\);
+
+(c) Find the new basis functions \(\varphi_i^{\prime}\) defined by the transformation \(\mathrm{U}\), and write explicitly (in terms of \(x, y\), and \(z\) ) the functional forms of \(L_x \varphi_i^{\prime}, i=1,2,3\).
+
+Hint. Use \(\int e^{-r^2} d^3 r=\pi^{3 / 2}, \int x^2 e^{-r^2} d^3 r=\frac{1}{2} \pi^{3 / 2} ;\) the integrals are over \(\mathbb{R}^3\).
+
+\subsection{Solution}
+
+
+
+\newpage
+\section{Question 5}
+
+\subsection{Problem}
+
+Using the formal properties of unitary transformations, show that the commutator \([x, p]=i\) is invariant under unitary transformation of the matrices representing \(x\) and \(p\).
+
+\subsection{Solution}
+
+
+
+\newpage
+\section{Question 6}
+
+\subsection{Problem}
+
+The Pauli matrices
+\[
+    \sigma_1=\left(\begin{array}{ll}
+            0 & 1 \\
+            1 & 0
+        \end{array}\right), \quad \sigma_2=\left(\begin{array}{cc}
+            0 & -i \\
+            i & 0
+        \end{array}\right), \quad \sigma_3=\left(\begin{array}{rr}
+            1 & 0  \\
+            0 & -1
+        \end{array}\right),
+\]
+have commutator \(\left[\sigma_1, \sigma_2\right]=2 i \sigma_3\). Show that this relationship continues to be valid if these matrices are transformed by
+\[
+    \mathbf{U}=\left(\begin{array}{rr}
+            \cos \theta  & \sin \theta \\
+            -\sin \theta & \cos \theta
+        \end{array}\right) .
+\]
+
+\subsection{Solution}
+
+
+
+\newpage
+\bibliographystyle{plain}
+\bibliography{references}
+\nocite{El-Deeb_PEU-356_Assignments}
+
+\end{document}
