@@ -52,6 +52,161 @@ ANS. \(\lambda = -1, -1, 2. \)
 
 \subsection{Solution}
 
+det(\(A - \lambda I\)) = 0
+
+\[
+    \begin{vmatrix}
+        -\lambda & 1        & 1        \\
+        1        & -\lambda & 1        \\
+        1        & 1        & -\lambda \\
+    \end{vmatrix} = 0
+\]
+
+\[
+    \begin{vmatrix}
+        \lambda^2 & -\lambda \\
+        1         & -\lambda \\
+    \end{vmatrix} + \begin{vmatrix}
+        1   & 1       \\
+        - 1 & \lambda \\
+    \end{vmatrix} + \begin{vmatrix}
+        1 & -\lambda \\
+        1 & 1        \\
+    \end{vmatrix} = 0
+\]
+
+\[
+    \lambda^3 - 3 \lambda - 2 = 0
+\]
+
+\[
+    (\lambda + 1)(\lambda + 1)(\lambda - 2) = 0
+\]
+
+\[
+    \lambda = -1, -1, 2
+\]
+
+For \(\lambda = -1\)
+
+\[
+    A\vec{v} = -\vec{v}
+\]
+
+\[
+    \begin{pmatrix}
+        0 & 1 & 1 \\
+        1 & 0 & 1 \\
+        1 & 1 & 0 \\
+    \end{pmatrix} \begin{pmatrix}
+        x \\
+        y \\
+        z \\
+    \end{pmatrix} = \begin{pmatrix}
+        -x \\
+        -y \\
+        -z \\
+    \end{pmatrix}
+\]
+
+\[
+    y + z = -x
+\]
+
+\[
+    x + z = -y
+\]
+
+\[
+    x + y = -z
+\]
+
+\[
+    \vec{v} = \begin{pmatrix}
+        x    \\
+        y    \\
+        -x-y \\
+    \end{pmatrix}
+\]
+
+\[
+    \vec{v} = x \begin{pmatrix}
+        1  \\
+        0  \\
+        -1 \\
+    \end{pmatrix} + y \begin{pmatrix}
+        0  \\
+        1  \\
+        -1 \\
+    \end{pmatrix}
+\]
+
+\[
+    \vec{v_1} = \frac{1}{\sqrt{2}} \begin{pmatrix}
+        1  \\
+        0  \\
+        -1 \\
+    \end{pmatrix},\quad \vec{v_2} = \frac{1}{\sqrt{2}} \begin{pmatrix}
+        0  \\
+        1  \\
+        -1 \\
+    \end{pmatrix}
+\]
+
+For \(\lambda = 2\)
+
+\[
+    A\vec{v} = 2\vec{v}
+\]
+
+\[
+    \begin{pmatrix}
+        0 & 1 & 1 \\
+        1 & 0 & 1 \\
+        1 & 1 & 0 \\
+    \end{pmatrix} \begin{pmatrix}
+        x \\
+        y \\
+        z \\
+    \end{pmatrix} = \begin{pmatrix}
+        2x \\
+        2y \\
+        2z \\
+    \end{pmatrix}
+\]
+
+\[
+    y + z = 2x
+\]
+
+\[
+    x + z = 2y
+\]
+
+\[
+    x + y = 2z
+\]
+
+\[
+    y = z = x
+\]
+
+\[
+    \vec{v} = x \begin{pmatrix}
+        1 \\
+        1 \\
+        1 \\
+    \end{pmatrix}
+\]
+
+\[
+    \vec{v_3} = \frac{1}{\sqrt{3}} \begin{pmatrix}
+        1 \\
+        1 \\
+        1 \\
+    \end{pmatrix}
+\]
+
 \newpage
 \section{Question 2}
 
@@ -69,9 +224,162 @@ Find the eigenvalues and corresponding normalized eigenvectors of the matrix
 
 Orthogonalize any degenerate eigenvectors.
 
-ANS. \(\lambda = 0, 0, 3. \)
+ANS. \(\lambda = 1, 1, 6. \)
 
 \subsection{Solution}
+
+det(\(A - \lambda I\)) = 0
+
+\[
+    \begin{vmatrix}
+        5 - \lambda & 0           & 2           \\
+        0           & 1 - \lambda & 0           \\
+        2           & 0           & 2 - \lambda \\
+    \end{vmatrix} = 0
+\]
+
+\[
+    (5 - \lambda)(1 - \lambda)(2 - \lambda) - 4(1 - \lambda) = 0
+\]
+
+\[
+    (1 - \lambda)((5 - \lambda)(2 - \lambda) - 4) = 0
+\]
+
+\[
+    \lambda_1 = 1
+\]
+
+\[
+    (5 - \lambda)(2 - \lambda) = 4
+\]
+
+\[
+    \lambda_2 = 1, \quad \lambda_3 = 6
+\]
+
+For \(\lambda = 1\)
+
+\[
+    A\vec{v} = \vec{v}
+\]
+
+\[
+    \begin{pmatrix}
+        5 & 0 & 2 \\
+        0 & 1 & 0 \\
+        2 & 0 & 2 \\
+    \end{pmatrix} \begin{pmatrix}
+        x \\
+        y \\
+        z \\
+    \end{pmatrix} = \begin{pmatrix}
+        x \\
+        y \\
+        z \\
+    \end{pmatrix}
+\]
+
+\[
+    y = y
+\]
+
+\[
+    z = -2x
+\]
+
+
+\[
+    \vec{v} = \begin{pmatrix}
+        x   \\
+        y   \\
+        -2x \\
+    \end{pmatrix}
+\]
+
+\[
+    \vec{v} = x \begin{pmatrix}
+        1  \\
+        0  \\
+        -2 \\
+    \end{pmatrix} +
+    y \begin{pmatrix}
+        0 \\
+        1 \\
+        0 \\
+    \end{pmatrix}
+\]
+
+\[
+    \vec{v_1} = \frac{1}{\sqrt{5}} \begin{pmatrix}
+        1  \\
+        0  \\
+        -2 \\
+    \end{pmatrix},\quad \vec{v_2} = \begin{pmatrix}
+        0 \\
+        1 \\
+        0 \\
+    \end{pmatrix}
+\]
+
+For \(\lambda = 6\)
+
+\[
+    A\vec{v} = 6\vec{v}
+\]
+
+\[
+    \begin{pmatrix}
+        5 & 0 & 2 \\
+        0 & 1 & 0 \\
+        2 & 0 & 2 \\
+    \end{pmatrix} \begin{pmatrix}
+        x \\
+        y \\
+        z \\
+    \end{pmatrix} = \begin{pmatrix}
+        6x \\
+        6y \\
+        6z \\
+    \end{pmatrix}
+\]
+
+\[
+    2z = x
+\]
+
+\[
+    y = y
+\]
+
+\[
+    \vec{v} = \begin{pmatrix}
+        2z \\
+        y  \\
+        z  \\
+    \end{pmatrix}
+\]
+
+\[
+    \vec{v} = z \begin{pmatrix}
+        2 \\
+        0 \\
+        1 \\
+    \end{pmatrix} +
+    y \begin{pmatrix}
+        0 \\
+        1 \\
+        0 \\
+    \end{pmatrix}
+\]
+
+\[
+    \vec{v_3} = \frac{1}{\sqrt{5}} \begin{pmatrix}
+        2 \\
+        0 \\
+        1 \\
+    \end{pmatrix}
+\]
 
 \newpage
 \section{Question 3}
@@ -87,6 +395,184 @@ Describe the geometric properties of the surface
 How is it oriented in 3-D space? Is it a conic section? If so, which kind?
 
 \subsection{Solution}
+
+Writing the quadratic form equation in matrix form, we get,
+
+\[
+    A = \begin{pmatrix}
+        1 & 1 & 0 \\
+        1 & 2 & 1 \\
+        0 & 1 & 1 \\
+    \end{pmatrix}
+\]
+
+\[
+    \begin{vmatrix}
+        1 - \lambda & 1           & 0           \\
+        1           & 2 - \lambda & 1           \\
+        0           & 1           & 1 - \lambda \\
+    \end{vmatrix} = 0
+\]
+
+\[
+    (1 - \lambda)((2 - \lambda)(1 - \lambda) - 2) = 0
+\]
+
+\[
+    \lambda_1 = 1
+\]
+
+\[
+    (2 - \lambda)(1 - \lambda) = 2
+\]
+
+\[
+    \lambda_2 = 3, \quad \lambda_3 = 0
+\]
+
+\[
+    a^2 + 3b^2 = 1
+\]
+
+Since we have two positive eigenvalues and one zero eigenvalue, the surface is an elliptic cylinder.
+
+The direction is the eigenvector corresponding to the zero eigenvalue.
+
+\[
+    \begin{pmatrix}
+        1 & 1 & 0 \\
+        1 & 2 & 1 \\
+        0 & 1 & 1 \\
+    \end{pmatrix} \begin{pmatrix}
+        x \\
+        y \\
+        z \\
+    \end{pmatrix} = \begin{pmatrix}
+        0 \\
+        0 \\
+        0 \\
+    \end{pmatrix}
+\]
+
+\[
+    x = -y
+\]
+
+\[
+    x = z
+\]
+
+\[
+    \vec{v} = x \begin{pmatrix}
+        1  \\
+        -1 \\
+        1  \\
+    \end{pmatrix}
+\]
+
+\[
+    \vec{v_3} = \frac{1}{\sqrt{3}} \begin{pmatrix}
+        1  \\
+        -1 \\
+        1  \\
+    \end{pmatrix}
+\]
+
+Note that this is not an equation of a conic section, but rather would produce a conic section if a plane with normal vector \(\vec{v_3}\) and passes by the origin intersects the surface.
+
+To get the transformation matrix we need to find the other two normalized eigenvectors.
+
+For \(\lambda = 1\)
+
+\[
+    \begin{pmatrix}
+        1 & 1 & 0 \\
+        1 & 2 & 1 \\
+        0 & 1 & 1 \\
+    \end{pmatrix} \begin{pmatrix}
+        x \\
+        y \\
+        z \\
+    \end{pmatrix} = \begin{pmatrix}
+        x \\
+        y \\
+        z \\
+    \end{pmatrix}
+\]
+
+\[
+    y = 0
+\]
+
+\[
+    x + z = 0
+\]
+
+\[
+    \vec{v} = x \begin{pmatrix}
+        1  \\
+        0  \\
+        -1 \\
+    \end{pmatrix}
+\]
+
+\[
+    \vec{v_1} = \frac{1}{\sqrt{2}} \begin{pmatrix}
+        1  \\
+        0  \\
+        -1 \\
+    \end{pmatrix}
+\]
+
+For \(\lambda = 3\)
+
+\[
+    \begin{pmatrix}
+        1 & 1 & 0 \\
+        1 & 2 & 1 \\
+        0 & 1 & 1 \\
+    \end{pmatrix} \begin{pmatrix}
+        x \\
+        y \\
+        z \\
+    \end{pmatrix} = \begin{pmatrix}
+        3x \\
+        3y \\
+        3z \\
+    \end{pmatrix}
+\]
+
+\[
+    y = 2x
+\]
+
+\[
+    z = x
+\]
+
+\[
+    \vec{v} = x \begin{pmatrix}
+        1 \\
+        2 \\
+        1 \\
+    \end{pmatrix}
+\]
+
+\[
+    \vec{v_2} = \frac{1}{\sqrt{6}} \begin{pmatrix}
+        1 \\
+        2 \\
+        1 \\
+    \end{pmatrix}
+\]
+
+\[
+    T = \begin{pmatrix}
+        1/\sqrt{2}  & 1/\sqrt{6} & 1/\sqrt{3}  \\
+        0           & 2/\sqrt{6} & -1/\sqrt{3} \\
+        -1/\sqrt{2} & 1/\sqrt{6} & 1/\sqrt{3}  \\
+    \end{pmatrix}
+\]
 
 \newpage
 \section{Question 4}
@@ -117,6 +603,72 @@ Show that \(X(0)\) satisfies an eigenvalue problem.
 
 \subsection{Solution}
 
+(i) Newton's second law for the system is given by
+
+\[
+    {\left(m_k \ddot{x}_k\right) }_k = -\frac{\partial V}{\partial x_k}
+\]
+
+\[
+    {\left(m_k \ddot{x}_k\right) }_k = -\frac{1}{2} V_{ij} \frac{\partial}{\partial x_k} (x_i x_j)
+\]
+
+\[
+    {\left(m_k \ddot{x}_k\right) }_k = -\frac{1}{2} V_{ij} \left( \delta_{ik} x_j + \delta_{jk} x_i \right)
+\]
+
+\[
+    {\left(m_i \ddot{x}_i\right) }_i = -\frac{1}{2} \left(V_{ij} + V_{ji}\right) x_i
+    \ ||\ {\left(m_i \ddot{x}_i\right) }_i = -\frac{1}{2} {\left(\left(V + V^T\right) \vec{x}\right) }_i
+\]
+
+(ii)
+
+\[
+    \overrightarrow{x(t)} = \sin{\left(\omega t\right)} \overrightarrow{x_0}
+\]
+
+\[
+    \overrightarrow{\ddot{x}(t)} = -\omega^2\sin{\left(\omega t\right)} \overrightarrow{x_0}
+\]
+
+\[
+    {\left(m_i \ddot{x}_i\right) }_i = -\frac{1}{2} \left(V_{ij} + V_{ji}\right) x_i
+\]
+
+\[
+    \omega^2 m_i x_i = \frac{1}{2} \left(V_{ij} + V_{ji}\right) x_i
+\]
+
+\[
+    \omega^2 m_i = \frac{1}{2} \left(V_{ij} + V_{ji}\right)
+\]
+
+\[
+    \omega = \pm \sqrt{\frac{\sum_j V_{0j} + V_{j0}}{2 m_0}}
+\]
+
+If we assume m is a constant and V is symmetric, then
+
+\[
+    \omega^2 m \vec{x} = V \vec{x}
+\]
+
+Therefore, \(\vec{x}\) satisfies an eigenvalue problem.
+
+\[
+    \omega = \pm \frac{1}{\sqrt{m}} \sqrt{\sum_j V_{0j}}
+\]
+
+(iii)
+
+The eigenvalues of \(V_{ij}\) must be positive in order to have normal modes.
+
+\[
+    \omega^2 \geq 0
+\]
+
+
 \newpage
 \section{Question 5}
 
@@ -131,6 +683,140 @@ Consider the previous example with the following potential
 Find the normal modes.
 
 \subsection{Solution}
+
+\[
+    V = \begin{pmatrix}
+        0           & \frac{1}{2} & \frac{1}{2} \\
+        \frac{1}{2} & 0           & \frac{1}{2} \\
+        \frac{1}{2} & \frac{1}{2} & 0           \\
+    \end{pmatrix}
+\]
+
+\[
+    \begin{vmatrix}
+        -\lambda    & \frac{1}{2} & \frac{1}{2} \\
+        \frac{1}{2} & -\lambda    & \frac{1}{2} \\
+        \frac{1}{2} & \frac{1}{2} & -\lambda    \\
+    \end{vmatrix} = 0
+\]
+
+\[
+    \lambda \left( \lambda^2 - \frac{1}{4} \right)
+    - \frac{1}{2} \left( \frac{\lambda}{2} + \frac{1}{4} \right)
+    - \frac{1}{2} \left( \frac{\lambda}{2} + \frac{1}{4} \right) = 0
+\]
+
+\[
+    \left(\lambda-1\right) {\left(2\lambda+1\right) }^2 = 0
+\]
+
+\[
+    \lambda = 1, -\frac{1}{2}, -\frac{1}{2}
+\]
+
+For \(\lambda = 1\)
+
+\[
+    \begin{pmatrix}
+        0           & \frac{1}{2} & \frac{1}{2} \\
+        \frac{1}{2} & 0           & \frac{1}{2} \\
+        \frac{1}{2} & \frac{1}{2} & 0           \\
+    \end{pmatrix} \begin{pmatrix}
+        x \\
+        y \\
+        z \\
+    \end{pmatrix} = \begin{pmatrix}
+        x \\
+        y \\
+        z \\
+    \end{pmatrix}
+\]
+
+\[
+    y + z = 2x
+\]
+
+\[
+    x + z = 2y
+\]
+
+\[
+    x + y = 2z
+\]
+\[
+    x = y = z
+\]
+
+\[
+    \vec{v} = x \begin{pmatrix}
+        1 \\
+        1 \\
+        1 \\
+    \end{pmatrix}
+\]
+
+\[
+    \vec{v_1} = \frac{1}{\sqrt{3}} \begin{pmatrix}
+        1 \\
+        1 \\
+        1 \\
+    \end{pmatrix}
+\]
+
+For \(\lambda = -\frac{1}{2}\)
+
+\[
+    \begin{pmatrix}
+        0           & \frac{1}{2} & \frac{1}{2} \\
+        \frac{1}{2} & 0           & \frac{1}{2} \\
+        \frac{1}{2} & \frac{1}{2} & 0           \\
+    \end{pmatrix} \begin{pmatrix}
+        x \\
+        y \\
+        z \\
+    \end{pmatrix} = -\frac{1}{2} \begin{pmatrix}
+        x \\
+        y \\
+        z \\
+    \end{pmatrix}
+\]
+
+\[
+    x + y = - z
+\]
+
+\[
+    \vec{v} = \begin{pmatrix}
+        x      \\
+        y      \\
+        -x - y \\
+    \end{pmatrix}
+\]
+
+\[
+    \vec{v} = x \begin{pmatrix}
+        1 \\
+        0 \\
+        -1 \\
+    \end{pmatrix} +
+    y \begin{pmatrix}
+        0 \\
+        1 \\
+        -1 \\
+    \end{pmatrix}
+\]
+
+\[
+    \vec{v_2} = \frac{1}{\sqrt{2}} \begin{pmatrix}
+        1 \\
+        0 \\
+        -1 \\
+    \end{pmatrix},\quad \vec{v_3} = \frac{1}{\sqrt{2}} \begin{pmatrix}
+        0 \\
+        1 \\
+        -1 \\
+    \end{pmatrix}
+\]
 
 
 
