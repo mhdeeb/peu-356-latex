@@ -597,6 +597,129 @@ Hint. Use \(\int e^{-r^2} d^3 r=\pi^{3 / 2}, \int x^2 e^{-r^2} d^3 r=\frac{1}{2}
 
 \subsection{Solution}
 
+(a)
+
+\[
+    A_{n m}=\left\langle\phi_n|\hat{A}| \phi_m\right\rangle
+\]
+
+\[
+    L_x = -i\left(y \frac{\partial}{\partial z}-z \frac{\partial}{\partial y}\right)
+\]
+
+\[
+    \left\langle\phi_n|L_x| \phi_m\right\rangle
+    = -i\left\langle\phi_n\left|y \frac{\partial}{\partial z}-z \frac{\partial}{\partial y}\right| \phi_m\right\rangle
+\]
+
+\[
+    \left\langle\phi_n|\phi_m\right\rangle = \int \phi_n^* \phi_m d^3 r
+\]
+
+\[
+    \left\langle\phi_n|L_x| \phi_m\right\rangle
+    = -i\int \phi_n^* \left(y \frac{\partial}{\partial z}-z \frac{\partial}{\partial y}\right) \phi_m d^3 r
+\]
+
+\[
+    = -i{\left\lvert C\right\rvert}^2 \int x_n e^{-r^2} \left(x_2 \frac{\partial}{\partial x_3}-x_3 \frac{\partial}{\partial x_2}\right) x_m e^{-r^2} d^3 r
+\]
+
+\[
+    = -i{\left\lvert C\right\rvert}^2 \int x_n e^{-r^2} \left(x_2 \frac{\partial \left(x_m e^{-r^2}\right) }{\partial x_3}-x_3 \frac{\partial \left(x_m e^{-r^2}\right) }{\partial x_2}\right) d^3 r
+\]
+
+\[
+    = -i{\left\lvert C\right\rvert}^2 \int x_n e^{-r^2} \left(x_2 \left(\delta^m_3 e^{-r^2} + x_m \frac{\partial e^{-r^2}}{\partial x_3}\right) - x_3 \left(\delta^m_2 e^{-r^2} + x_m \frac{\partial e^{-r^2}}{\partial x_2}\right)\right) d^3 r
+\]
+
+\[
+    \frac{\partial e^{-r^2}}{\partial x_i} = -2 r \frac{\partial r}{\partial x_i} e^{-r^2}
+    = -2 x_i e^{-r^2}
+\]
+
+\[
+    = -i{\left\lvert C\right\rvert}^2 \int x_n e^{-2r^2} \left(x_2 \left(\delta^m_3 - 2 x_m x_3\right) - x_3 \left(\delta^m_2 - 2 x_m x_2\right)\right) d^3 r
+\]
+
+\[
+    L_{nm} = i{\left\lvert C\right\rvert}^2 \int e^{-2r^2} x_n \left(x_3 \delta^m_2 - x_2 \delta^m_3\right)  d^3 r
+\]
+
+\[
+    L_{nm} = i{\left\lvert C\right\rvert}^2
+    \int_{-\infty }^{\infty}
+    \int_{-\infty}^{\infty}
+    \int_{-\infty}^{\infty}
+    e^{-2{x_1}^2}e^{-2{x_2}^2}e^{-2{x_3}^2}
+    x_n \left(x_3 \delta^m_2 - x_2 \delta^m_3\right)  d{x_1} d{x_2} d{x_3}
+\]
+
+From this we can see that only the terms with \(n = 2, m = 3\) and \(n = 3, m = 2\) will survive.
+Because they are the product of two even functions, the rest are have odd symmetry and will integrate to zero.
+
+\[
+    L_{23} = -i{\left\lvert C\right\rvert}^2
+    \int_{-\infty }^{\infty}
+    \int_{-\infty}^{\infty}
+    \int_{-\infty}^{\infty}
+    e^{-2{x_1}^2}e^{-2{x_2}^2}e^{-2{x_3}^2}
+    {x_2}^2  d{x_1} d{x_2} d{x_3}
+\]
+
+\[
+    = -i{\left\lvert C\right\rvert}^2
+    \int_{-\infty }^{\infty}e^{-2{x_1}^2}d{x_1}
+    \int_{-\infty}^{\infty}{x_2}^2e^{-2{x_2}^2}d{x_2}
+    \int_{-\infty}^{\infty}e^{-2{x_3}^2}d{x_3}
+\]
+
+\[
+    = -i{\left\lvert C\right\rvert}^2
+    \left(\frac{\pi^{\frac{3}{2}}}{8\sqrt{2}}\right)
+\]
+
+\[
+    {\left\lvert C\right\rvert}^2 = \frac{8\sqrt{2}}{\pi^{\frac{3}{2}}}
+\]
+
+\[
+    L_{23} = -i
+\]
+
+\[
+    L_{32} = i \frac{8\sqrt{2}}{\pi^{\frac{3}{2}}}
+    \int_{-\infty }^{\infty}
+    \int_{-\infty}^{\infty}
+    \int_{-\infty}^{\infty}
+    e^{-2{x_1}^2}e^{-2{x_2}^2}e^{-2{x_3}^2}
+    {x_3}^2  d{x_1} d{x_2} d{x_3}
+\]
+
+\[
+    = i \frac{8\sqrt{2}}{\pi^{\frac{3}{2}}}
+    \int_{-\infty }^{\infty}e^{-2{x_1}^2}d{x_1}
+    \int_{-\infty}^{\infty}e^{-2{x_2}^2}d{x_2}
+    \int_{-\infty}^{\infty}{x_3}^2e^{-2{x_3}^2}d{x_3}
+\]
+
+\[
+    = i \frac{8\sqrt{2}}{\pi^{\frac{3}{2}}}
+    \left(\frac{\pi^{\frac{3}{2}}}{8\sqrt{2}}\right)
+    = i
+\]
+
+\[
+    L_x =
+    \begin{pmatrix}
+        0 & 0 & 0  \\
+        0 & 0 & -i \\
+        0 & i & 0
+    \end{pmatrix}
+\]
+
+(b)
+
 
 
 \newpage
