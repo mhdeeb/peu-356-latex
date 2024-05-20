@@ -720,7 +720,87 @@ Because they are the product of two even functions, the rest are have odd symmet
 
 (b)
 
+U is a unitary matrix. because \(U U^\dagger = I\).
 
+\[
+    U^{-1} = U^\dagger
+\]
+
+\[
+    U L_x U^\dagger
+    = \begin{pmatrix}
+        1 & 0                  & 0                   \\
+        0 & \frac{1}{\sqrt{2}} & -\frac{i}{\sqrt{2}} \\
+        0 & \frac{1}{\sqrt{2}} & \frac{i}{\sqrt{2}}
+    \end{pmatrix}
+    \begin{pmatrix}
+        0 & 0 & 0  \\
+        0 & 0 & -i \\
+        0 & i & 0
+    \end{pmatrix}
+    \begin{pmatrix}
+        1 & 0                  & 0                   \\
+        0 & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}  \\
+        0 & \frac{i}{\sqrt{2}} & -\frac{i}{\sqrt{2}}
+    \end{pmatrix}
+\]
+
+\[
+    = \begin{pmatrix}
+        1 & 0                  & 0                   \\
+        0 & \frac{1}{\sqrt{2}} & -\frac{i}{\sqrt{2}} \\
+        0 & \frac{1}{\sqrt{2}} & \frac{i}{\sqrt{2}}
+    \end{pmatrix}
+    \begin{pmatrix}
+        0 & 0                  & 0                   \\
+        0 & \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\
+        0 & \frac{i}{\sqrt{2}} & \frac{i}{\sqrt{2}}
+    \end{pmatrix}
+\]
+
+\[
+    = \begin{pmatrix}
+        0 & 0 & 0  \\
+        0 & 1 & 0  \\
+        0 & 0 & -1
+    \end{pmatrix}
+\]
+
+(c)
+
+\[
+    x \rightarrow x, \quad y \rightarrow \frac{1}{\sqrt{2}}(y + i z), \quad z \rightarrow \frac{1}{\sqrt{2}}(y - i z)
+\]
+
+\[
+    \varphi^{'}_1 = C x e^{-r^2}
+\]
+
+\[
+    \varphi^{'}_2 = \frac{C}{\sqrt{2}}(y + i z) e^{-r^2}
+\]
+
+\[
+    \varphi^{'}_3 = \frac{C}{\sqrt{2}}(y - i z) e^{-r^2}
+\]
+
+Lx transforms as follows:
+
+\[
+    x \rightarrow 0, \quad y \rightarrow -iz, \quad z \rightarrow iy
+\]
+
+\[
+    L_x \varphi_1^{\prime} = 0
+\]
+
+\[
+    L_x \varphi_2^{\prime} = -\frac{C}{\sqrt{2}}(y + iz) e^{-r^2}
+\]
+
+\[
+    L_x \varphi_3^{\prime} = \frac{C}{\sqrt{2}}(y - iz) e^{-r^2}
+\]
 
 \newpage
 \section{5.7.1}
