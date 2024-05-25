@@ -36,12 +36,22 @@
 
 \subsection{Problem}
 
+Using conventional vector notation, evaluate \(\sum_j\left|\hat{\mathbf{e}}_j\right\rangle\left\langle\hat{\mathbf{e}}_j \mid \mathbf{a}\right\rangle \), where \(\mathbf{a}\) is an arbitrary vector in the space spanned by the \(\hat{\mathbf{e}}_j\).
+
 \subsection{Solution}
 
 \newpage
 \section{5.1.12}
 
 \subsection{Problem}
+
+Letting \(\mathbf{a}=a_1 \hat{\mathbf{e}}_1+a_2 \hat{\mathbf{e}}_2\) and \(\mathbf{b}=b_1 \hat{\mathbf{e}}_1+b_2 \hat{\mathbf{e}}_2\) be vectors in \(\mathbb{R}^2\), for what values of \(k\), if any, is
+
+\[
+    \langle\mathbf{a} \mid \mathbf{b}\rangle=a_1 b_1-a_1 b_2-a_2 b_1+k a_2 b_2
+\]
+
+a valid definition of a scalar product?
 
 \subsection{Solution}
 
@@ -50,12 +60,40 @@
 
 \subsection{Problem}
 
+Apply the Gram-Schmidt procedure to form the first three Laguerre polynomials:
+\[
+u_n(x)=x^n, \quad n=0,1,2, \ldots, \quad 0 \leq x<\infty, \quad w(x)=e^{-x} .
+\]
+
+The conventional normalization is
+
+\[
+\int_0^{\infty} L_m(x) L_n(x) e^{-x} d x=\delta_{m n} .
+\]
+
+ANS. \(\quad L_0=1, \quad L_1=(1-x), \quad L_2=\frac{2-4 x+x^2}{2}\).
+
 \subsection{Solution}
 
 \newpage
 \section{5.2.4}
 
 \subsection{Problem}
+
+Using the Gram-Schmidt orthogonalization procedure, construct the lowest three Hermite polynomials:
+
+\[
+u_n(x)=x^n, \quad n=0,1,2, \ldots, \quad-\infty<x<\infty, \quad w(x)=e^{-x^2} .
+\]
+
+For this set of polynomials the usual normalization is
+
+\[
+\begin{aligned}
+\int_{-\infty}^{\infty} H_m(x) H_n(x) w(x) d x= & \delta_{m n} 2^m m!\pi^{1 / 2} \\
+\text { ANS. } & H_0=1, \quad H_1=2 x, \quad H_2=4 x^2-2 .
+\end{aligned}
+\]
 
 \subsection{Solution}
 
@@ -64,6 +102,8 @@
 
 \subsection{Problem}
 
+Show (without introducing matrix representations) that the adjoint of the adjoint of an operator restores the original operator, i.e., that \({\left(A^{\dagger}\right)}^{\dagger}=A\).
+
 \subsection{Solution}
 
 \newpage
@@ -71,12 +111,22 @@
 
 \subsection{Problem}
 
+\(U\) and \(V\) are two arbitrary operators. Without introducing matrix representations of these operators, show that
+
+\[
+{(U V)}^{\dagger}=V^{\dagger} U^{\dagger} .
+\]
+
+Note the resemblance to adjoint matrices.
+
 \subsection{Solution}
 
 \newpage
 \section{5.4.4}
 
 \subsection{Problem}
+
+The operator \(\mathcal{L}\) is Hermitian. Show that \(\left\langle\mathcal{L}^2\right\rangle \geq 0\), meaning that for all \(\psi\) in the space in which \(\mathcal{L}\) is defined, \(\left\langle\psi\left|\mathcal{L}^2\right| \psi\right\rangle \geq 0\).
 
 \subsection{Solution}
 
