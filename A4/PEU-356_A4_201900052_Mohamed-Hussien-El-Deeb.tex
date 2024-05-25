@@ -36,12 +36,21 @@
 
 \subsection{Problem}
 
+Verify that \(V_{i ; j}=g_{i k} V_{; j}^k\) by showing that
+
+\[
+    \frac{\partial V_i}{\partial q^j}-V_k \Gamma_{i j}^k=g_{i k}\left[\frac{\partial V^k}{\partial q^j}+V^m \Gamma_{m j}^k\right] .
+\]
+
 \subsection{Solution}
 
 \newpage
 \section{4.3.8}
 
 \subsection{Problem}
+
+From the circular cylindrical metric tensor \(g_{i j}\), calculate the \(\Gamma_{i j}^k\) for circular cylindrical coordinates.
+Note. There are only three nonvanishing \(\Gamma\).
 
 \subsection{Solution}
 
@@ -50,12 +59,17 @@
 
 \subsection{Problem}
 
+Show that for the metric tensor \(g_{ij; k} = g^{ij}_{;k} = 0\).
+
 \subsection{Solution}
 
 \newpage
 \section{4.3.12}
 
 \subsection{Problem}
+
+The covariant vector \(A_i\) is the gradient of a scalar. Show that the difference of covariant
+derivatives \(A_{i;j} - A_{j;i}\) vanishes.
 
 \subsection{Solution}
 
@@ -64,6 +78,19 @@
 
 \subsection{Problem}
 
+Assuming the functions \(u\) and \(v\) to be differentiable,
+
+(a) Show that a necessary and sufficient condition that \(u(x, y, z)\) and \(v(x, y, z)\) are related by some function \(f(u, v)=0\) is that \((\nabla u) \times(\nabla v)=0\);
+
+(b) If \(u=u(x, y)\) and \(v=v(x, y)\), show that the condition \((\nabla u) \times(\nabla v)=0\) leads to the 2-D Jacobian
+
+\[
+J=\frac{\partial(u, v)}{\partial(x, y)}=\left|\begin{array}{ll}
+\frac{\partial u}{\partial x} & \frac{\partial u}{\partial y} \\
+\frac{\partial v}{\partial x} & \frac{\partial v}{\partial y}
+\end{array}\right|=0 .
+\]
+
 \subsection{Solution}
 
 \newpage
@@ -71,12 +98,26 @@
 
 \subsection{Problem}
 
+A 2-D orthogonal system is described by the coordinates \(q_{1}\) and \(q_{2}\). Show that the Jacobian \(J\) satisfies the equation
+
+\[
+J \equiv \frac{\partial(x, y)}{\partial\left(q_{1}, q_{2}\right)} \equiv \frac{\partial x}{\partial q_{1}} \frac{\partial y}{\partial q_{2}}-\frac{\partial x}{\partial q_{2}} \frac{\partial y}{\partial q_{1}}=h_{1} h_{2} .
+\]
+
+Hint. It's easier to work with the square of each side of this equation.
+
 \subsection{Solution}
 
 \newpage
 \section{4.4.3}
 
 \subsection{Problem}
+
+For the transformation \(u=x+y, v=x / y\), with \(x \geq 0\) and \(y \geq 0\), find the Jacobian \(\frac{\partial(x, y)}{\partial(u, v)}\)
+
+(a) By direct computation,
+
+(b) By first computing \(J^{-1}\).
 
 \subsection{Solution}
 
