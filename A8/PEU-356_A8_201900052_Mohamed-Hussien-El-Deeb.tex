@@ -46,6 +46,48 @@ then the matrix is Hermitian.
 
 \subsection{Solution}
 
+Let M be a matrix with real eigenvalues and eigenvectors that satisfy \(\mathbf{x}_i^{\dagger} \mathbf{x}_j=\delta_{i j}\). We want to show that M is Hermitian.
+
+Let \(\lambda_i\) be the eigenvalues of M and \(\mathbf{x}_i\) be the eigenvectors of M and U being the diagonalization matrix. Since the eigenvalues of M are real, we have
+
+\[
+    \lambda_i=\lambda_i^*
+\]
+
+\[
+    \langle \mathbf{x}_i | \mathbf{x}_j \rangle = \delta_{i j}
+\]
+
+\[
+    M | \mathbf{x}_i \rangle = \lambda_i | \mathbf{x}_i \rangle
+\]
+
+\[
+    U M U^{-1} = D
+\]
+
+\[
+    \because D = \text{diag}(\lambda_1, \lambda_2, \ldots, \lambda_n)
+\]
+
+\[
+    \therefore D = D^{\dagger}
+\]
+
+\[
+    \therefore U M U^{-1} = {\left(U^{-1}\right) }^{\dagger} M^\dagger U^\dagger
+\]
+
+Since M has orthogonal eigenvectors and the Diagonal matrix D's eigenvectors are the standard basis vectors which are orthogonal, U is a unitary matrix.
+
+\[
+    \therefore U M U^{-1} = U M^\dagger U^{-1}
+\]
+
+\[
+    \therefore M = M^\dagger
+\]
+
 \newpage
 \section{6.4.3}
 
@@ -57,6 +99,34 @@ Hint. Assume that the nonsymmetric real matrix can be diagonalized and develop a
 
 \subsection{Solution}
 
+Let A be a real matrix that is not symmetric, U be the orthogonal or unitary matrix that diagonalizes A, and D be the diagonal matrix.
+
+\[
+    U A U^\dagger = D
+\]
+
+\[
+    A = U^\dagger D U
+\]
+
+\[
+    A^\dagger = U^\dagger D^\dagger U
+\]
+
+\[
+    A^\dagger = U^\dagger D^* U
+\]
+
+If we assume that eigenvalues of A are real, then the entries of D are real.
+
+\[
+    A^\dagger = U^\dagger D U
+\]
+
+We know that \(A\) is not symmetric. Therefore, \(A\) is not equal to \(A^\dagger \). This is a contradiction.
+
+Note: If we assume an orthogonal transformation we don't need to assume that the eigenvalues are real.
+
 \newpage
 \section{6.4.5}
 
@@ -65,6 +135,24 @@ Hint. Assume that the nonsymmetric real matrix can be diagonalized and develop a
 A has eigenvalues \(\lambda_i\) and corresponding eigenvectors \(\left|\mathbf{x}_i\right\rangle \). Show that \(\mathrm{A}^{-1}\) has the same eigenvectors but with eigenvalues \(\lambda_i^{-1}\).
 
 \subsection{Solution}
+
+\[
+    A \left|\mathbf{x}_i\right\rangle = \lambda_i \left|\mathbf{x}_i\right\rangle
+\]
+
+\[
+    A^{-1} A \left|\mathbf{x}_i\right\rangle = A^{-1} \lambda_i \left|\mathbf{x}_i\right\rangle
+\]
+
+\[
+    \left|\mathbf{x}_i\right\rangle = \lambda_i A^{-1} \left|\mathbf{x}_i\right\rangle
+\]
+
+Since A is invertible, we can be sure that \(\lambda_i \neq 0\).
+
+\[
+    A^{-1} \left|\mathbf{x}_i\right\rangle = \lambda_i^{-1} \left|\mathbf{x}_i\right\rangle
+\]
 
 \newpage
 \section{6.4.6}
@@ -89,6 +177,38 @@ show that \(\mathrm{A}\) is a singular matrix. This means that if a matrix (or o
 
 \subsection{Solution}
 
+\subsubsection{Part (a)}
+
+Let A be a singular matrix. Since A is singular, \(\det A = 0\).
+
+From the singular equation, we know that there is a nontrivial solution to the equation
+
+\[
+    \det (A - \lambda I ) = 0
+\]
+
+\[
+    \lambda = 0
+\]
+
+Therefore, there is at least one nonzero column vector \(\mathbf{v}\) such that
+
+\[
+    A|\mathbf{v}\rangle=0 .
+\]
+
+\subsubsection{Part (b)}
+
+Let there be a nonzero vector \(|\mathbf{v}\rangle \) such that
+
+\[
+    \mathrm{A}|\mathbf{v}\rangle=0
+\]
+
+This means that V is an eigenvector of A with eigenvalue 0.
+
+Since there is an eigenvector of A with eigenvalue 0, det(A) = 0. Therefore, A is a singular matrix.
+
 \newpage
 \section{6.5.2}
 
@@ -102,6 +222,46 @@ If \(A\) is a \(2 \times 2\) matrix, show that its eigenvalues \(\lambda \) sati
 
 \subsection{Solution}
 
+Let A be a \(2 \times 2\) matrix.
+
+\[
+    A = \begin{pmatrix}
+        a & b \\
+        c & d
+    \end{pmatrix}
+\]
+
+\[
+    \det(A) = ad - bc
+\]
+
+\[
+    \operatorname{trace}(A) = a + d
+\]
+
+\[
+    \det(A - \lambda I) = 0
+\]
+
+\[
+    \begin{vmatrix}
+        a - \lambda & b           \\
+        c           & d - \lambda
+    \end{vmatrix} = 0
+\]
+
+\[
+    (a - \lambda)(d - \lambda) - bc = 0
+\]
+
+\[
+    \lambda^2 - (a + d) \lambda + ad - bc = 0
+\]
+
+\[
+    \lambda^2 - \operatorname{trace}(A) \lambda + \det(A) = 0
+\]
+
 \newpage
 \section{6.5.5}
 
@@ -110,10 +270,62 @@ If \(A\) is a \(2 \times 2\) matrix, show that its eigenvalues \(\lambda \) sati
 \(\mathrm{A}\) is an \(n\) th-order Hermitian matrix with orthonormal eigenvectors \(\left|\mathbf{x}_i\right\rangle \) and real eigenvalues \(\lambda_1 \leq \lambda_2 \leq \lambda_3 \leq \cdots \leq \lambda_n\). Show that for a unit magnitude vector \(|\mathbf{y}\rangle \),
 
 \[
-\lambda_1 \leq\langle\mathbf{y}|\mathrm{A}| \mathbf{y}\rangle \leq \lambda_n .
+    \lambda_1 \leq\langle\mathbf{y}|\mathrm{A}| \mathbf{y}\rangle \leq \lambda_n .
 \]
 
 \subsection{Solution}
+
+We start by expanding the vector \(|\mathbf{y}\rangle \) in terms of the eigenvectors of A.
+
+\[
+    |\mathbf{y}\rangle = \sum_{i=1}^{n} c_i |\mathbf{x}_i\rangle
+\]
+
+\[
+    \langle\mathbf{y}| = \sum_{i=1}^{n} c_i^* \langle\mathbf{x}_i|
+\]
+
+\[
+    \langle\mathbf{y}|\mathbf{y}\rangle = \sum_{i, j=1}^{n} c_i^* c_j \langle\mathbf{x}_i|\mathbf{x}_j\rangle
+\]
+
+Since the eigenvectors are orthonormal, we have
+
+\[
+    \langle\mathbf{y}|\mathbf{y}\rangle = \sum_{i=1}^{n} |c_i|^2
+\]
+
+Since the vector \(|\mathbf{y}\rangle \) has unit magnitude, we have
+
+\[
+    \sum_{i=1}^{n} |c_i|^2 = 1
+\]
+
+\[
+    \langle\mathbf{y}|\mathrm{A}| \mathbf{y}\rangle = \sum_{i, j=1}^{n} c_i^* c_j \langle\mathbf{x}_i|\mathrm{A}| \mathbf{x}_j\rangle
+\]
+
+\[
+    \langle\mathbf{y}|\mathrm{A}| \mathbf{y}\rangle = \sum_{i, j=1}^{n} c_i^* c_j \lambda_j \langle\mathbf{x}_i|\mathbf{x}_j\rangle
+\]
+
+\[
+    \langle\mathbf{y}|\mathrm{A}| \mathbf{y}\rangle = \sum_{i=1}^{n} |c_i|^2 \lambda_i
+\]
+
+We can substitute the value of \(\lambda_i\) in the above equation with the the smallest and largest eigenvalues.
+
+\[
+    {\left(\langle\mathbf{y}|\mathrm{A}| \mathbf{y}\rangle\right)}_{\min}  = \lambda_1 \sum_{i=1}^{n} |c_i|^2 = \lambda_1
+\]
+
+\[
+    {\left(\langle\mathbf{y}|\mathrm{A}| \mathbf{y}\rangle\right)}_{\max}  = \lambda_n \sum_{i=1}^{n} |c_i|^2 = \lambda_n
+\]
+
+\[
+    \lambda_1 \leq\langle\mathbf{y}|\mathrm{A}| \mathbf{y}\rangle \leq \lambda_n
+\]
 
 \newpage
 \section{6.5.8}
@@ -123,12 +335,36 @@ If \(A\) is a \(2 \times 2\) matrix, show that its eigenvalues \(\lambda \) sati
 \(\mathrm{A}\) is a normal matrix with eigenvalues \(\lambda_n\) and orthonormal eigenvectors \(\left|\mathbf{x}_n\right\rangle \). Show that A may be written as
 
 \[
-\mathrm{A}=\sum_n \lambda_n\left|\mathbf{x}_n\right\rangle\left\langle\mathbf{x}_n\right| .
+    \mathrm{A}=\sum_n \lambda_n\left|\mathbf{x}_n\right\rangle\left\langle\mathbf{x}_n\right| .
 \]
 
 Hint. Show that both this eigenvector form of \(\mathrm{A}\) and the original \(\mathrm{A}\) give the same result acting on an arbitrary vector \(|\mathbf{y}\rangle \).
 
 \subsection{Solution}
+
+Lets start by expanding the vector \(|\mathbf{y}\rangle \) in terms of the eigenvectors of A.
+
+\[
+    |\mathbf{y}\rangle = \sum_{n} c_n |\mathbf{x}_n\rangle
+\]
+
+\[
+    \mathrm{A}|\mathbf{y}\rangle = \mathrm{A} \sum_{n} c_n |\mathbf{x}_n\rangle = \sum_{n} c_n \mathrm{A} |\mathbf{x}_n\rangle
+    = \sum_{n} \lambda_n c_n |\mathbf{x}_n\rangle  (1)
+\]
+
+\[
+    \langle\mathbf{x}_n | \mathbf{x}_m\rangle = \delta^n_m
+\]
+
+\[
+    \mathrm{A}|\mathbf{y}\rangle = \sum_{n} \lambda_n\left|\mathbf{x}_n\right\rangle\left\langle\mathbf{x}_n\right|\sum_{m} c_m |\mathbf{x}_m\rangle
+\]
+
+\[
+    = \sum_{n, m} \lambda_n c_m\left|\mathbf{x}_n\right\rangle\left\langle\mathbf{x}_n\right|\mathbf{x}_m\rangle
+    = \sum_{n} \lambda_n c_n |\mathbf{x}_n\rangle (2)
+\]
 
 \newpage
 \section{6.5.15}
@@ -138,7 +374,7 @@ Hint. Show that both this eigenvector form of \(\mathrm{A}\) and the original \(
 Two matrices \(\mathrm{U}\) and \(\mathrm{H}\) are related by
 
 \[
-\mathrm{U}=e^{i a \mathrm{H}}
+    \mathrm{U}=e^{i a \mathrm{H}}
 \]
 
 with \(a\) real.
@@ -154,6 +390,70 @@ with \(a\) real.
 Hint. \(\mathrm{H}\) may be diagonalized by a similarity transformation. Then \(\mathrm{U}\) is also diagonal. The corresponding eigenvalues are given by \(u_j=\exp \left(i a h_j\right)\).
 
 \subsection{Solution}
+
+\subsubsection{Part (a)}
+
+If \(\mathrm{H}\) is Hermitian, then \(\mathrm{H} = \mathrm{H}^\dagger \).
+
+\[
+    \mathrm{U}^\dagger \mathrm{U} = e^{-i a \mathrm{H^\dagger}} e^{i a \mathrm{H}} = e^{-i a \mathrm{H} + i a \mathrm{H}} = e^{0} = I
+\]
+
+\[
+    \mathrm{U}^\dagger = \mathrm{U}^{-1}
+\]
+
+\subsubsection{Part (b)}
+
+If \(\mathrm{U}\) is unitary, then \(\mathrm{U}^\dagger \mathrm{U} = I\).
+
+\[
+    \mathrm{U}^\dagger \mathrm{U} = e^{-i a \mathrm{H^\dagger}} e^{i a \mathrm{H}} = e^{i a \left(\mathrm{H}-\mathrm{H^\dagger}\right)} = I = e^0
+\]
+
+\[
+    i a \left(\mathrm{H}-\mathrm{H^\dagger}\right) = 0
+\]
+
+\[
+    \mathrm{H} = \mathrm{H}^\dagger
+\]
+
+\subsubsection{Part (c)}
+
+\[
+    \det(e^M) = e^{\text{trace}(M)}
+\]
+
+\[
+    \det(\mathrm{U}) = e^{i a\cdot\text{trace}(\mathrm{H})}
+\]
+
+If trace \(\mathrm{H}=0\),
+
+\[
+    \det(\mathrm{U}) = e^{i a \cdot 0} = e^0 = 1
+\]
+
+\subsubsection{Part (d)}
+
+If \(\det(\mathrm{U}) = +1\),
+
+\[
+    \det(\mathrm{U}) = e^{i a\cdot\text{trace}(\mathrm{H})}
+\]
+
+\[
+    e^{i a\cdot\text{trace}(\mathrm{H})} = 1
+\]
+
+\[
+    i a\cdot\text{trace}(\mathrm{H}) = 0
+\]
+
+\[
+    \text{trace}(\mathrm{H}) = 0
+\]
 
 \newpage
 \section{6.5.17}
@@ -175,6 +475,31 @@ Show that the corresponding eigenvalues \({\left(\rho^2\right)}_\lambda \) and \
 This means that the eigenvalues of \(\mathrm{P}\) are 0 and 1.
 
 \subsection{Solution}
+
+\[
+    P \left|\mathbf{x}_i\right\rangle = \lambda_i \left|\mathbf{x}_i\right\rangle
+\]
+
+\[
+    P P \left|\mathbf{x}_i\right\rangle = \lambda_i^2 \left|\mathbf{x}_i\right\rangle
+\]
+
+Subtracting the above two equations, we get
+
+\[
+    \left(\lambda_i^2 - \lambda_i\right) \left|\mathbf{x}_i\right\rangle = 0
+\]
+
+Since the eigenvectors are non-zero, we have
+
+\[
+    \lambda_i^2 - \lambda_i = 0
+\]
+
+\[
+    \lambda = 0, 1
+\]
+
 
 \newpage
 \bibliographystyle{plain}
