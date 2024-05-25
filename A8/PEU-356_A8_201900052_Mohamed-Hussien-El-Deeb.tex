@@ -36,12 +36,24 @@
 
 \subsection{Problem}
 
+As a converse of the theorem that Hermitian matrices have real eigenvalues and that eigenvectors corresponding to distinct eigenvalues are orthogonal, show that if
+
+(a) the eigenvalues of a matrix are real and
+
+(b) the eigenvectors satisfy \(\mathbf{x}_i^{\dagger} \mathbf{x}_j=\delta_{i j}\),
+
+then the matrix is Hermitian.
+
 \subsection{Solution}
 
 \newpage
 \section{6.4.3}
 
 \subsection{Problem}
+
+Show that a real matrix that is not symmetric cannot be diagonalized by an orthogonal or unitary transformation.
+
+Hint. Assume that the nonsymmetric real matrix can be diagonalized and develop a contradiction.
 
 \subsection{Solution}
 
@@ -50,12 +62,30 @@
 
 \subsection{Problem}
 
+A has eigenvalues \(\lambda_i\) and corresponding eigenvectors \(\left|\mathbf{x}_i\right\rangle \). Show that \(\mathrm{A}^{-1}\) has the same eigenvectors but with eigenvalues \(\lambda_i^{-1}\).
+
 \subsection{Solution}
 
 \newpage
 \section{6.4.6}
 
 \subsection{Problem}
+
+A square matrix with zero determinant is labeled singular.
+
+(a) If \(\mathrm{A}\) is singular, show that there is at least one nonzero column vector \(\mathbf{v}\) such that
+
+\[
+    A|\mathbf{v}\rangle=0 .
+\]
+
+(b) If there is a nonzero vector \(|\mathbf{v}\rangle \) such that
+
+\[
+    \mathrm{A}|\mathbf{v}\rangle=0,
+\]
+
+show that \(\mathrm{A}\) is a singular matrix. This means that if a matrix (or operator) has zero as an eigenvalue, the matrix (or operator) has no inverse and its determinant is zero.
 
 \subsection{Solution}
 
@@ -64,12 +94,24 @@
 
 \subsection{Problem}
 
+If \(A\) is a \(2 \times 2\) matrix, show that its eigenvalues \(\lambda \) satisfy the secular equation
+
+\[
+    \lambda^2-\lambda \operatorname{trace}(A)+\operatorname{\det}(A)=0 .
+\]
+
 \subsection{Solution}
 
 \newpage
 \section{6.5.5}
 
 \subsection{Problem}
+
+\(\mathrm{A}\) is an \(n\) th-order Hermitian matrix with orthonormal eigenvectors \(\left|\mathbf{x}_i\right\rangle \) and real eigenvalues \(\lambda_1 \leq \lambda_2 \leq \lambda_3 \leq \cdots \leq \lambda_n\). Show that for a unit magnitude vector \(|\mathbf{y}\rangle \),
+
+\[
+\lambda_1 \leq\langle\mathbf{y}|\mathrm{A}| \mathbf{y}\rangle \leq \lambda_n .
+\]
 
 \subsection{Solution}
 
@@ -78,6 +120,14 @@
 
 \subsection{Problem}
 
+\(\mathrm{A}\) is a normal matrix with eigenvalues \(\lambda_n\) and orthonormal eigenvectors \(\left|\mathbf{x}_n\right\rangle \). Show that A may be written as
+
+\[
+\mathrm{A}=\sum_n \lambda_n\left|\mathbf{x}_n\right\rangle\left\langle\mathbf{x}_n\right| .
+\]
+
+Hint. Show that both this eigenvector form of \(\mathrm{A}\) and the original \(\mathrm{A}\) give the same result acting on an arbitrary vector \(|\mathbf{y}\rangle \).
+
 \subsection{Solution}
 
 \newpage
@@ -85,12 +135,44 @@
 
 \subsection{Problem}
 
+Two matrices \(\mathrm{U}\) and \(\mathrm{H}\) are related by
+
+\[
+\mathrm{U}=e^{i a \mathrm{H}}
+\]
+
+with \(a\) real.
+
+(a) If \(\mathrm{H}\) is Hermitian, show that \(\mathrm{U}\) is unitary.
+
+(b) If \(\mathrm{U}\) is unitary, show that \(\mathrm{H}\) is Hermitian.\ (\(\mathrm{H}\) is independent of \(a\).)
+
+(c) If trace \(\mathrm{H}=0\), show that \(\operatorname{\det} \mathrm{U}=+1\).
+
+(d) If \(\operatorname{\det} \mathrm{U}=+1\), show that trace \(\mathrm{H}=0\).
+
+Hint. \(\mathrm{H}\) may be diagonalized by a similarity transformation. Then \(\mathrm{U}\) is also diagonal. The corresponding eigenvalues are given by \(u_j=\exp \left(i a h_j\right)\).
+
 \subsection{Solution}
 
 \newpage
 \section{6.5.17}
 
 \subsection{Problem}
+
+A matrix \(\mathrm{P}\) is a projection operator satisfying the condition
+
+\[
+    \mathrm{P}^2=\mathrm{P} .
+\]
+
+Show that the corresponding eigenvalues \({\left(\rho^2\right)}_\lambda \) and \(\rho_\lambda \) satisfy the relation
+
+\[
+    {\left(\rho^2\right)}_\lambda={\left(\rho_\lambda\right)}^2=\rho_\lambda .
+\]
+
+This means that the eigenvalues of \(\mathrm{P}\) are 0 and 1.
 
 \subsection{Solution}
 
