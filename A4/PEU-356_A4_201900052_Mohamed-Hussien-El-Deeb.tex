@@ -44,6 +44,45 @@ Verify that \(V_{i ; j}=g_{i k} V_{; j}^k\) by showing that
 
 \subsection{Solution}
 
+\[
+    \frac{\partial V_i}{\partial q^j} = \frac{\partial \left(g_{ik} V^k\right) }{\partial q^j}
+    = g_{ik} \frac{\partial V^k}{\partial q^j} + V^k \frac{\partial g_{ik}}{\partial q^j}
+\]
+
+\[
+    \because \frac{\partial g_{ik}}{\partial q^j} = \varepsilon_{i} \cdot \frac{\partial \varepsilon_k}{\partial q^j} + \varepsilon_k \cdot \frac{\partial \varepsilon_i}{\partial q^j}
+\]
+
+\[
+    \therefore \frac{\partial V_i}{\partial q^j} = g_{ik} \frac{\partial V^k}{\partial q^j}
+    + \left(\varepsilon_i \cdot \frac{\partial \varepsilon_k}{\partial q^j}\right) V^k
+    + \left(\varepsilon_k \cdot \frac{\partial \varepsilon_i}{\partial q^j}\right) V^k
+\]
+
+\[
+    = g_{ik} \frac{\partial V^k}{\partial q^j}
+    + \left(\varepsilon^l \cdot \frac{\partial \varepsilon_k}{\partial q^j}\right) V^k g_{il}
+    + \left(\varepsilon^k \cdot \frac{\partial \varepsilon_i}{\partial q^j}\right) V_k
+\]
+
+\[
+    \frac{\partial V_i}{\partial q^j} = g_{ik} \frac{\partial V^k}{\partial q^j} + V^k \Gamma_{k j}^l g_{il} + V_k \Gamma_{i j}^k
+\]
+
+\[
+    \frac{\partial V_i}{\partial q^j} - V_k \Gamma_{i j}^k = g_{ik} \frac{\partial V^k}{\partial q^j} + V^k \Gamma_{k j}^l g_{il}
+\]
+
+\[
+    \frac{\partial V_i}{\partial q^j} - V_k \Gamma_{i j}^k
+    = g_{ik} \frac{\partial V^k}{\partial q^j}
+    + V^l \Gamma_{l j}^k g_{ik}
+\]
+
+\[
+    \frac{\partial V_i}{\partial q^j}-V_k \Gamma_{i j}^k=g_{i k}\left[\frac{\partial V^k}{\partial q^j}+V^m \Gamma_{m j}^k\right] .
+\]
+
 \newpage
 \section{4.3.8}
 
