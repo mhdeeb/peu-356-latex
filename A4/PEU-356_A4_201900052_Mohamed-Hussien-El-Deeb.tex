@@ -93,6 +93,42 @@ Note. There are only three nonvanishing \(\Gamma\).
 
 \subsection{Solution}
 
+\[
+    g_{ij} = \left[\begin{array}{ccc}
+            1 & 0      & 0 \\
+            0 & \rho^2 & 0 \\
+            0 & 0      & 1
+        \end{array}\right]
+\]
+
+\[
+    g^{ij} = \left[\begin{array}{ccc}
+            1 & 0                & 0 \\
+            0 & \frac{1}{\rho^2} & 0 \\
+            0 & 0                & 1
+        \end{array}\right]
+\]
+
+\[
+    \Gamma_{i j}^n = \frac{1}{2} g^{n k} \left(\frac{\partial g_{i k}}{\partial q^j} + \frac{\partial g_{j k}}{\partial q^i} - \frac{\partial g_{i j}}{\partial q^k}\right)
+\]
+
+\[
+    \Gamma_{i j}^n = \frac{1}{2} g^{n n} \left(\frac{\partial g_{i n}}{\partial q^j} + \frac{\partial g_{j n}}{\partial q^i} - \frac{\partial g_{i j}}{\partial q^n}\right)
+\]
+
+\[
+    \frac{\partial g_{2 2}}{\partial q^1} = \frac{\partial \rho^2}{\partial \rho} = 2\rho
+\]
+
+\[
+    \Gamma_{2 1}^2 = \Gamma_{1 2}^2 = \frac{1}{\rho}
+\]
+
+\[
+    \Gamma_{2 2}^1 = -\rho
+\]
+
 \newpage
 \section{4.3.10}
 
@@ -101,6 +137,26 @@ Note. There are only three nonvanishing \(\Gamma\).
 Show that for the metric tensor \(g_{ij; k} = g^{ij}_{;k} = 0\).
 
 \subsection{Solution}
+
+\[
+    g_{ij;k} = \frac{\partial g_{ij}}{\partial k} - \Gamma_{ik}^\alpha g_{\alpha j} - \Gamma_{jk}^\alpha g_{i\alpha}
+\]
+
+\[
+    = \frac{\partial g_{ij}}{\partial k} - \frac{1}{2} g_{j\alpha} g^{\alpha \beta} \left(\frac{\partial g_{\beta k}}{\partial i} + \frac{\partial g_{\beta i}}{\partial k} - \frac{\partial g_{ik}}{\partial \beta} \right)
+\]
+
+\[
+    - \frac{1}{2} g_{i \alpha} g^{\alpha \beta}
+    \left(\frac{\partial g_{\beta k}}{\partial j} + \frac{\partial g_{\beta j}}{\partial k} - \frac{\partial g_{jk}}{\partial \beta} \right)
+\]
+
+\[
+    = \frac{\partial g_{ij}}{\partial k} - \frac{1}{2} \left( \frac{\partial g_{jk}}{\partial i} + \frac{\partial g_{ji}}{\partial k} - \frac{\partial g_{ik}}{\partial j} \right) - \frac{1}{2} \left( \frac{\partial g_{ik}}{\partial j} + \frac{\partial g_{ij}}{\partial k} - \frac{\partial g_{jk}}{\partial i} \right) = 0
+\]
+
+Contravariant g is just a function of covariant g, so the same applies for \(g^{ij}_{;k}\).
+if covariant g does not depend on k, then neither does contravariant g.
 
 \newpage
 \section{4.3.12}
@@ -111,6 +167,24 @@ The covariant vector \(A_i\) is the gradient of a scalar. Show that the differen
 derivatives \(A_{i;j} - A_{j;i}\) vanishes.
 
 \subsection{Solution}
+
+\[
+    A_{i ; j} = \frac{\partial A_i}{\partial q^j} - A_k \Gamma_{i j}^k
+\]
+
+\[
+    A_i = \frac{\partial \phi}{\partial q^i}
+\]
+
+\[
+    A_{i ; j} = \frac{\partial^2 \phi}{\partial q^j \partial q^i} - \frac{\partial \phi}{\partial q^k} \Gamma_{i j}^k
+\]
+
+\[
+    A_{j ; i} = \frac{\partial^2 \phi}{\partial q^i \partial q^j} - \frac{\partial \phi}{\partial q^k} \Gamma_{j i}^k
+\]
+
+Since the partial derivatives commute and the Christoffel symbols are symmetric in their lower indices, \(A_{i ; j} - A_{j ; i} = 0\).
 
 \newpage
 \section{4.4.1}
@@ -132,6 +206,53 @@ Assuming the functions \(u\) and \(v\) to be differentiable,
 
 \subsection{Solution}
 
+\subsubsection{Part (a)}
+
+\[
+    f = 0
+\]
+
+\[
+    \nabla f = \frac{\partial f}{\partial u} \nabla u + \frac{\partial f}{\partial v} \nabla v = 0
+\]
+
+\[
+    \frac{\partial f}{\partial u} \nabla u = -\frac{\partial f}{\partial v} \nabla v
+\]
+
+\[
+    \nabla u = c \nabla v
+\]
+
+\[
+    (\nabla u) \times (\nabla v) = c (\nabla v) \times (\nabla v) = 0
+\]
+
+\subsubsection{Part (b)}
+
+\[
+    (\nabla u) \times (\nabla v) = \left|\begin{array}{ccc}
+        \hat{\imath}                  & \hat{\jmath}                  & \hat{k} \\
+        \frac{\partial u}{\partial x} & \frac{\partial u}{\partial y} & 0       \\
+        \frac{\partial v}{\partial x} & \frac{\partial v}{\partial y} & 0
+    \end{array}\right|
+\]
+
+\[
+    \implies \frac{\partial u}{\partial x} \frac{\partial v}{\partial y} = \frac{\partial u}{\partial y} \frac{\partial v}{\partial x}
+\]
+
+\[
+    \frac{\partial (u,v)}{\partial (x,y)} = \begin{vmatrix}
+        \frac{\partial u}{\partial x} & \frac{\partial u}{\partial y} \\
+        \frac{\partial v}{\partial x} & \frac{\partial v}{\partial y}
+    \end{vmatrix} = 0
+\]
+
+\[
+    \implies \frac{\partial u}{\partial x} \frac{\partial v}{\partial y} = \frac{\partial u}{\partial y} \frac{\partial v}{\partial x}
+\]
+
 \newpage
 \section{4.4.2}
 
@@ -147,6 +268,51 @@ Hint. It's easier to work with the square of each side of this equation.
 
 \subsection{Solution}
 
+\[
+    {\left(\frac{\partial x}{\partial q_{1}} \frac{\partial y}{\partial q_{2}}-\frac{\partial x}{\partial q_{2}} \frac{\partial y}{\partial q_{1}}\right) }^2
+    = {\left(\frac{\partial x}{\partial q_{1}} \frac{\partial y}{\partial q_{2}}\right)}^2
+    + {\left(\frac{\partial x}{\partial q_{2}} \frac{\partial y}{\partial q_{1}}\right)}^2
+    - 2 \frac{\partial x}{\partial q_{1}} \frac{\partial x}{\partial q_{2}} \frac{\partial y}{\partial q_{2}} \frac{\partial y}{\partial q_{1}}
+\]
+
+\[
+    {h_i}^2 = {\left(\frac{\partial x}{\partial q_i}\right)}^2  + {\left(\frac{\partial y}{\partial q_i}\right)}^2
+\]
+
+\[
+    {h_1}^2{h_2}^2 = \left({\left(\frac{\partial x}{\partial q_1}\right)}^2  + {\left(\frac{\partial y}{\partial q_1}\right)}^2\right)\left({\left(\frac{\partial x}{\partial q_2}\right)}^2  + {\left(\frac{\partial y}{\partial q_2}\right)}^2\right)
+\]
+
+\[
+    = {\left(\frac{\partial x}{\partial q_1} \frac{\partial y}{\partial q_2}\right)}^2
+    + {\left(\frac{\partial x}{\partial q_2} \frac{\partial y}{\partial q_1}\right)}^2
+    - 2 \frac{\partial x}{\partial q_{1}} \frac{\partial x}{\partial q_{2}} \frac{\partial y}{\partial q_{2}} \frac{\partial y}{\partial q_{1}}
+\]
+
+\[
+    + {\left(\frac{\partial x}{\partial q_1} \frac{\partial x}{\partial q_2}\right)}^2
+    + {\left(\frac{\partial y}{\partial q_1} \frac{\partial y}{\partial q_2}\right)}^2
+    + 2 \frac{\partial x}{\partial q_{1}} \frac{\partial x}{\partial q_{2}} \frac{\partial y}{\partial q_{2}} \frac{\partial y}{\partial q_{1}}
+\]
+
+\[
+    = {\left(\frac{\partial x}{\partial q_{1}} \frac{\partial y}{\partial q_{2}}-\frac{\partial x}{\partial q_{2}} \frac{\partial y}{\partial q_{1}}\right) }^2
+    + {\left(\frac{\partial x}{\partial q_{1}} \frac{\partial x}{\partial q_{2}}+\frac{\partial y}{\partial q_{1}} \frac{\partial y}{\partial q_{2}}\right) }^2
+\]
+
+\[
+    \frac{\partial x}{\partial q_{1}} \frac{\partial x}{\partial q_{2}}+\frac{\partial y}{\partial q_{1}} \frac{\partial y}{\partial q_{2}}
+    = \varepsilon_1 \cdot \varepsilon_2 = 0
+\]
+
+\[
+    {h_1}^2{h_2}^2 = {\left(\frac{\partial x}{\partial q_{1}} \frac{\partial y}{\partial q_{2}}-\frac{\partial x}{\partial q_{2}} \frac{\partial y}{\partial q_{1}}\right) }^2
+\]
+
+\[
+    h_1h_2 = \frac{\partial x}{\partial q_{1}} \frac{\partial y}{\partial q_{2}}-\frac{\partial x}{\partial q_{2}} \frac{\partial y}{\partial q_{1}}
+\]
+
 \newpage
 \section{4.4.3}
 
@@ -159,6 +325,43 @@ For the transformation \(u=x+y, v=x / y\), with \(x \geq 0\) and \(y \geq 0\), f
 (b) By first computing \(J^{-1}\).
 
 \subsection{Solution}
+
+\subsubsection{Part (a)}
+
+\[
+    x = \frac{uv}{1 + v} \quad y = \frac{u}{1 + v}
+\]
+\[
+    \frac{\partial x}{\partial u} = \frac{v}{1 + v} \quad \frac{\partial x}{\partial v} = \frac{u}{{(1 + v)}^2}
+\]
+
+\[
+    \frac{\partial y}{\partial u} = \frac{1}{1 + v} \quad \frac{\partial y}{\partial v} = -\frac{u}{{(1 + v)}^2}
+\]
+
+\[
+    \frac{\partial(x, y)}{\partial(u, v)} = \begin{vmatrix}
+        \frac{v}{1 + v} & \frac{u}{{(1 + v)}^2}  \\
+        \frac{1}{1 + v} & -\frac{u}{{(1 + v)}^2}
+    \end{vmatrix} = - \frac{uv}{{(1 + v)}^3} - \frac{u}{{(1 + v)}^3} = -\frac{u}{{(1 + v)}^2}
+\]
+
+\subsubsection{Part (b)}
+
+\[
+    J^{-1} = \frac{\partial(u, v)}{\partial(x, y)} = \begin{vmatrix}
+        1   & 1      \\
+        1/y & -x/y^2
+    \end{vmatrix} = - \frac{x}{y^2} - \frac{1}{y} = -\frac{x + y}{y^2} = -\frac{u}{\frac{u^2}{{(1+v)}^2}}
+\]
+
+\[
+    J^{-1}  = -\frac{{(1+v)}^2}{u}
+\]
+
+\[
+    J = -\frac{u}{{(1+v)}^2}
+\]
 
 \newpage
 \bibliographystyle{plain}
