@@ -40,6 +40,12 @@ Using conventional vector notation, evaluate \(\sum_j\left|\hat{\mathbf{e}}_j\ri
 
 \subsection{Solution}
 
+\[
+    \sum_j\left|\hat{\mathbf{e}}_j\right\rangle\left\langle\hat{\mathbf{e}}_j \mid \mathbf{a}\right\rangle=\sum_j\left|\hat{\mathbf{e}}_j\right\rangle\left(\hat{\mathbf{e}}_j \cdot \mathbf{a}\right)=\sum_j\left(\hat{\mathbf{e}}_j \cdot \mathbf{a}\right)\hat{\mathbf{e}}_j
+\]
+
+This is the projection of \(\mathbf{a}\) onto the basis vectors \(\hat{\mathbf{e}}_j\).
+
 \newpage
 \section{5.1.12}
 
@@ -54,6 +60,13 @@ Letting \(\mathbf{a}=a_1 \hat{\mathbf{e}}_1+a_2 \hat{\mathbf{e}}_2\) and \(\math
 a valid definition of a scalar product?
 
 \subsection{Solution}
+
+\[
+    \langle\mathbf{a} \mid \mathbf{a}\rangle = {(a_1 - a_2)}^2 + (k - 1) a_2^2 \geq 0
+\]
+
+For this to be true, \(k \geq 1\).
+
 
 \newpage
 \section{5.2.2}
@@ -74,6 +87,66 @@ The conventional normalization is
 ANS. \(\quad L_0=1, \quad L_1=(1-x), \quad L_2=\frac{2-4 x+x^2}{2}\).
 
 \subsection{Solution}
+
+\[
+    L_n = x^n - \sum_{k=0}^{n-1} \left\langle x^n \mid L_k\right\rangle \tilde{L_k}
+\]
+
+\[
+    \tilde{L_k} = \frac{L_k}{\left\langle L_k \mid L_k\right\rangle}
+\]
+
+\[
+    \hat{L_k} = \frac{L_k}{\sqrt{\left\langle L_k \mid L_k\right\rangle}}
+\]
+
+\[
+    L_0 = 1
+\]
+
+\[
+    \left\langle 1 \mid 1\right\rangle = \int_0^{\infty} e^{-x} d x = 1
+\]
+
+\[
+    \tilde{L_0} = \frac{L_0}{\left\langle L_0 \mid L_0\right\rangle}  = \frac{1}{\left\langle 1 \mid 1\right\rangle} = 1
+\]
+
+\[
+    \left\langle x \mid 1\right\rangle = \int_0^{\infty} x e^{-x} d x = 1
+\]
+
+\[
+    L_1 = x - \left\langle x \mid 1\right\rangle 1 = x - 1
+\]
+
+\[
+    \left\langle x - 1 \mid x - 1\right\rangle = \int_0^{\infty} {(x - 1)}^2 e^{-x} d x = 1
+\]
+
+\[
+    \tilde{L_1} = \hat{L_1} = x - 1
+\]
+
+\[
+    \left\langle x^2 \mid 1\right\rangle = \int_0^{\infty} x^2 e^{-x} d x = 2
+\]
+
+\[
+    \left\langle x^2 \mid x-1\right\rangle = \int_0^{\infty} x^2 (x-1) e^{-x} d x = 4
+\]
+
+\[
+    L_2 = x^2 - 2 - 4 (x-1) = x^2 - 4 x + 2
+\]
+
+\[
+    \left\langle L_2 \mid L_2\right\rangle = \int_0^{\infty} {(x^2 - 4 x + 2)}^2 e^{-x} d x = 4
+\]
+
+\[
+    \hat{L_2} = \frac{x^2 - 4 x + 2}{2}
+\]
 
 \newpage
 \section{5.2.4}
@@ -97,6 +170,82 @@ For this set of polynomials the usual normalization is
 
 \subsection{Solution}
 
+\[
+    H_n = x^n - \sum_{k=0}^{n-1} \left\langle x^n \mid H_k\right\rangle \tilde{H_k}
+\]
+
+\[
+    \tilde{H_k} = \frac{H_k}{\left\langle H_k \mid H_k\right\rangle}
+\]
+
+\[
+    \hat{H_k} = \sqrt{\frac{2^k k! \sqrt{\pi}}{\left\langle H_k \mid H_k\right\rangle}}H_k
+\]
+
+\[
+    H_0 = 1
+\]
+
+\[
+    \left\langle H_0 \mid H_0\right\rangle = \int_{-\infty}^{\infty} e^{-x^2} d x = \sqrt{\pi}
+\]
+
+\[
+    \tilde{H_0} = \frac{H_0}{\left\langle H_0 \mid H_0\right\rangle}  = \frac{1}{\left\langle 1 \mid 1\right\rangle} = \frac{1}{\sqrt{\pi}}
+\]
+
+\[
+    \hat{H_0} = 1
+\]
+
+\[
+    H_0 \equiv \hat{H_0}
+\]
+
+\[
+    \left\langle x \mid H_0\right\rangle = \int_{-\infty}^{\infty} x e^{-x^2} d x = 0
+\]
+
+\[
+    H_1 = x - \left\langle x \mid H_0\right\rangle \tilde{H_0} = x
+\]
+
+\[
+    \left\langle H_1 \mid H_1\right\rangle = \int_{-\infty}^{\infty} x^2 e^{-x^2} d x = \frac{\sqrt{\pi}}{2}
+\]
+
+\[
+    \tilde{H_1} = \frac{2 x}{\sqrt{\pi}}
+\]
+
+\[
+    \hat{H_1} = 2 x
+\]
+
+\[
+    H_1 \equiv \hat{H_1}
+\]
+
+\[
+    \left\langle x^2 \mid H_0\right\rangle = \int_{-\infty}^{\infty} x^2 e^{-x^2} d x = \frac{\sqrt{\pi}}{2}
+\]
+
+\[
+    \left\langle x^2 \mid H_1\right\rangle = 2 \int_{-\infty}^{\infty} x^3 e^{-x^2} d x = 0
+\]
+
+\[
+    H_2 = x^2 - \left\langle x^2 \mid H_0\right\rangle \tilde{H_0} - \left\langle x^2 \mid H_1\right\rangle \tilde{H_1} = x^2 - \frac{1}{2}
+\]
+
+\[
+    \left\langle H_2 \mid H_2\right\rangle = \int_{-\infty}^{\infty} {(x^2 - \frac{1}{2})}^2 e^{-x^2} d x = \frac{\sqrt{\pi}}{2}
+\]
+
+\[
+    \hat{H_2} = 4 x^2 - 2
+\]
+
 \newpage
 \section{5.3.1}
 
@@ -105,6 +254,14 @@ For this set of polynomials the usual normalization is
 Show (without introducing matrix representations) that the adjoint of the adjoint of an operator restores the original operator, i.e., that \({\left(A^{\dagger}\right)}^{\dagger}=A\).
 
 \subsection{Solution}
+
+\[
+    \left\langle\psi\left|A\right| \phi\right\rangle
+    = \left\langle A^{\dagger} \psi \mid \phi\right\rangle
+    = \left\langle\phi\left|A^{\dagger}\right| \psi\right\rangle^{*}
+    = \left\langle {\left(A^{\dagger}\right) }^{\dagger} \psi \mid \phi\right\rangle^{*}
+    = \left\langle\psi\left|{\left(A^{\dagger}\right) }^{\dagger}\right| \phi\right\rangle
+\]
 
 \newpage
 \section{5.3.2}
@@ -121,6 +278,26 @@ Note the resemblance to adjoint matrices.
 
 \subsection{Solution}
 
+\[
+    \left\langle\psi\left|U V\right| \phi\right\rangle
+    = \left\langle U^{\dagger} \psi \left|V\right| \phi\right\rangle
+    = \left\langle V^{\dagger} U^{\dagger} \psi \mid \phi\right\rangle
+\]
+
+\[
+    \left\langle\psi\left|U V\right| \phi\right\rangle
+    = \left\langle {\left(U V\right) }^{\dagger} \psi \mid \phi\right\rangle
+\]
+
+\[
+    \left\langle {\left(U V\right) }^{\dagger} \psi \mid \phi\right\rangle
+    = \left\langle V^{\dagger} U^{\dagger} \psi \mid \phi\right\rangle
+\]
+
+\[
+    {\left(U V\right) }^{\dagger} = V^{\dagger} U^{\dagger}
+\]
+
 \newpage
 \section{5.4.4}
 
@@ -129,6 +306,19 @@ Note the resemblance to adjoint matrices.
 The operator \(\mathcal{L}\) is Hermitian. Show that \(\left\langle\mathcal{L}^2\right\rangle \geq 0\), meaning that for all \(\psi \) in the space in which \(\mathcal{L}\) is defined, \(\left\langle\psi\left|\mathcal{L}^2\right| \psi\right\rangle \geq 0\).
 
 \subsection{Solution}
+
+\[
+    \left\langle\psi\left|\mathcal{L}^2\right| \psi\right\rangle
+    = \left\langle\psi\left|\mathcal{L} \mathcal{L}\right| \psi\right\rangle
+    = \left\langle\mathcal{L}^\dagger \psi |\mathcal{L} \psi\right\rangle
+    = \left\langle\mathcal{L} \psi |\mathcal{L} \psi\right\rangle
+\]
+
+By definition of inner product,
+
+\[
+    \left\langle\mathcal{L} \psi |\mathcal{L} \psi\right\rangle \geq 0
+\]
 
 \newpage
 \bibliographystyle{plain}
