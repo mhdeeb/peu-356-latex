@@ -42,6 +42,28 @@ The double summation \( K_{ij} A^i B^j \) is invariant for any two vectors \( A^
 
 \subsection{Solution}
 
+\[
+    {(A')}^i = \frac{\partial {(x')}^i}{\partial x^\alpha} A^\alpha
+\]
+
+\[
+    {(B')}^j = \frac{\partial {(x')}^j}{\partial x^\beta} B^\beta
+\]
+
+\[
+    K_{ij} A^i B^j = {(K')}_{ij} {(A')}^i {(B')}^j
+\]
+
+\[
+    K_{ij} A^i B^j = \frac{\partial {(x')}^i}{\partial x^\alpha} \frac{\partial {(x')}^j}{\partial x^\beta} {(K')}_{ij}  A^\alpha B^\beta
+\]
+
+\[
+    {(K')}_{ij} = \frac{\partial x^\alpha}{\partial {(x')}^i} \frac{\partial x^\beta}{\partial {(x')}^j} K_{\alpha \beta}
+\]
+
+\(K\) transforms as a second-rank covariant tensor.
+
 \newpage
 \section{4.2.2}
 
@@ -52,6 +74,14 @@ we establish a one-to-one correspondence between the components of an antisymmet
 tensor (second-rank) and the components of a vector.
 
 \subsection{Solution}
+
+General antisymmetric tensor,
+
+\[
+    \varepsilon_{ijk \ldots} A_i B_j
+\]
+
+We will (n-2)-D space that is perpendicular to the 2-D space of the vector product.
 
 \newpage
 \section{4.2.4(a)}
@@ -66,6 +96,12 @@ same form independent of any rotation of the coordinate systems.
 \]
 
 \subsection{Solution}
+
+\[
+    {(A')}^{\alpha \gamma}_{\beta \phi} = \frac{\partial {(x')}^\alpha}{\partial x^i}\frac{\partial x^j}{\partial {(x')}^\beta}\frac{\partial {(x')}^\gamma}{\partial x^k}\frac{\partial x^l}{\partial {(x')}^\phi}\delta^i_j \delta^k_l
+\]
+
+We can see that the values of the partials does not change the value of the tensor.
 
 \newpage
 \section{4.2.6}
@@ -85,6 +121,46 @@ Show that \(\varepsilon_{ij}\) is invariant under orthogonal similarity transfor
 
 \subsection{Solution}
 
+\[
+    \varepsilon_{ij} = \begin{pmatrix}
+        0  & 1 \\
+        -1 & 0
+    \end{pmatrix}
+\]
+
+\[
+    \begin{pmatrix}
+        \cos \varphi  & \sin \varphi \\
+        -\sin \varphi & \cos \varphi
+    \end{pmatrix}
+    \begin{pmatrix}
+        0  & 1 \\
+        -1 & 0
+    \end{pmatrix}
+    \begin{pmatrix}
+        \cos \varphi & -\sin \varphi \\
+        \sin \varphi & \cos \varphi
+    \end{pmatrix}
+\]
+
+\[
+    =
+    \begin{pmatrix}
+        \cos \varphi  & \sin \varphi \\
+        -\sin \varphi & \cos \varphi
+    \end{pmatrix}
+    \begin{pmatrix}
+        \sin \varphi  & \cos \varphi \\
+        -\cos \varphi & \sin \varphi
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        0  & 1 \\
+        -1 & 0
+    \end{pmatrix}
+    = \varepsilon_{ij}
+\]
+
 \newpage
 \section{4.2.7}
 
@@ -97,6 +173,16 @@ Given \(A_k = \frac{1}{2}\varepsilon_{ijk}B^{ij}\) with \(B^{ij} = -B^{ji}\) ant
 \]
 
 \subsection{Solution}
+
+\[
+    2\varepsilon_{mnk}A_k = \varepsilon_{mnk}\varepsilon_{ijk}B^{ij}
+    = \left(\delta_{mi}\delta_{nj}-\delta_{mj}\delta_{ni}\right) B^{ij}
+    = B^{mn}-B^{nm} = 2B^{mn}
+\]
+
+\[
+    B^{mn} = \varepsilon_{mnk}A_k
+\]
 
 \newpage
 \section{4.3.1}
@@ -115,6 +201,19 @@ Example 3.2.1.
 
 \subsection{Solution}
 
+\[
+    \varepsilon^i \cdot \varepsilon_j = \delta^i_j
+\]
+
+\[
+    \varepsilon^i \cdot \varepsilon_i = \frac{\varepsilon_j \times \varepsilon_k \cdot \varepsilon_i}{\varepsilon_j \times \varepsilon_k \cdot \varepsilon_i}
+    = \frac{\varepsilon_j \times \varepsilon_k}{\varepsilon_j \times \varepsilon_k \cdot \varepsilon_i} \cdot \varepsilon_i
+\]
+
+\[
+    \varepsilon^i = \frac{\varepsilon_j \times \varepsilon_k}{\varepsilon_j \times \varepsilon_k \cdot \varepsilon_i}
+\]
+
 \newpage
 \section{4.3.2}
 
@@ -129,6 +228,40 @@ If the covariant vectors \(\varepsilon_i\) are orthogonal, show that
 (c) \(|\varepsilon^i| = 1/|\varepsilon_i|\).
 
 \subsection{Solution}
+
+\subsubsection{a}
+
+\[
+    \varepsilon_i \cdot \varepsilon_j = |\varepsilon_i||\varepsilon_j|\delta_{ij} = g_{ij}
+\]
+
+if i \(\neq \) j, then \(\varepsilon_i \cdot \varepsilon_j = 0\).
+
+\subsubsection{b}
+
+\[
+    \varepsilon_i = g^{ij}\varepsilon_j
+\]
+
+\[
+    g^{ii} = \varepsilon^i \cdot \varepsilon^i
+    = g^{ij} g^{ij} \varepsilon_j \cdot \varepsilon_j
+    = {g^{ij}}^2 g_{jj}
+    = {g^{ii}}^2 g_{ii}
+\]
+
+\[
+    g^{ii} = 1/g_{ii}
+\]
+
+\subsubsection{c}
+
+\[
+    |\varepsilon^i| = \sqrt{\varepsilon^i \cdot \varepsilon^i}
+    = \sqrt{{g^{ii}}}
+    = \frac{1}{\sqrt{g_{ii}}}
+    = \frac{1}{|\varepsilon_i|}
+\]
 
 \newpage
 \section{4.3.3}
@@ -148,6 +281,17 @@ Show that \(\Gamma^m_{jk}=\Gamma^m_{kj}\).
 
 \subsection{Solution}
 
+\[
+    \Gamma_{i j}^n = \frac{1}{2} g^{n k} \left(\frac{\partial g_{i k}}{\partial q^j} + \frac{\partial g_{j k}}{\partial q^i} - \frac{\partial g_{i j}}{\partial q^k}\right)
+\]
+
+We can see that the term \(\frac{\partial g_{i k}}{\partial q^j} + \frac{\partial g_{j k}}{\partial q^i}\) is symmetric under swapping i and j.
+
+We can also see that the term \(\frac{\partial g_{i j}}{\partial q^k}\) is symmetric under swapping i and j.
+
+All the terms that are affected by i and j are symmetric under swapping i and j.
+
+\newpage
 \section{4.3.6}
 
 \subsection{Problem}
@@ -165,6 +309,7 @@ Show that the covariant derivative of a covariant vector is given by
 \]
 
 \subsection{Solution}
+
 
 \newpage
 \bibliographystyle{plain}
