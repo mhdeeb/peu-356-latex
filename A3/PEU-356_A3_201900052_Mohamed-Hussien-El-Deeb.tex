@@ -36,12 +36,20 @@
 
 \subsection{Problem}
 
+The double summation \( K_{ij} A^i B^j \) is invariant for any two vectors \( A^i \) and \( B^j \). Prove that \( K_{ij} \) is a second-rank tensor.
+
+\textit{Note.} In the form \( ds^2 \) (invariant) \( = g_{ij} dx^i dx^j \), this result shows that the matrix \( g_{ij} \) is a tensor.
+
 \subsection{Solution}
 
 \newpage
 \section{4.2.2}
 
 \subsection{Problem}
+
+Show that the vector product is unique to 3-D space, that is, only in three dimensions can
+we establish a one-to-one correspondence between the components of an antisymmetric
+tensor (second-rank) and the components of a vector.
 
 \subsection{Solution}
 
@@ -50,12 +58,30 @@
 
 \subsection{Problem}
 
+Verify that the following fourth-rank tensors is isotropic, that is, that it has the
+same form independent of any rotation of the coordinate systems.
+
+\[
+    A^{ik}_{jl} = \delta^i_j \delta^k_l
+\]
+
 \subsection{Solution}
 
 \newpage
 \section{4.2.6}
 
 \subsection{Problem}
+
+Represent \(\varepsilon_{ij}\) by a 2 \(\times \) 2 matrix, and using the 2 \(\times \) 2 rotation matrix
+
+\[
+    \begin{pmatrix}
+        \cos \varphi  & \sin \varphi \\
+        -\sin \varphi & \cos \varphi
+    \end{pmatrix}
+\]
+
+Show that \(\varepsilon_{ij}\) is invariant under orthogonal similarity transformations.
 
 \subsection{Solution}
 
@@ -64,12 +90,28 @@
 
 \subsection{Problem}
 
+Given \(A_k = \frac{1}{2}\varepsilon_{ijk}B^{ij}\) with \(B^{ij} = -B^{ji}\) antisymmetric, show that,
+
+\[
+    B^{mn} = \varepsilon_{mnk}A_k
+\]
+
 \subsection{Solution}
 
 \newpage
 \section{4.3.1}
 
 \subsection{Problem}
+
+For the special case of 3-D space (\(\varepsilon_1, \varepsilon_2, \varepsilon_3\) defining a right-handed coordinate system,
+not necessarily orthogonal), show that
+
+\[
+    \varepsilon^i = \frac{\varepsilon_j \times \varepsilon_k}{\varepsilon_j \times \varepsilon_k \cdot \varepsilon_i}, \quad i = 1, 2, 3 \text{ and cyclic permutations. }
+\]
+
+Note. These contravariant basis vectors \(\varepsilon^i\) define the reciprocal lattice space of
+Example 3.2.1.
 
 \subsection{Solution}
 
@@ -78,12 +120,22 @@
 
 \subsection{Problem}
 
+If the covariant vectors \(\varepsilon_i\) are orthogonal, show that
+
+(a) \(g_{ij}\) is diagonal,
+
+(b) \(g^{ii} = 1/g_{ii}\) (no summation),
+
+(c) \(|\varepsilon^i| = 1/|\varepsilon_i|\).
+
 \subsection{Solution}
 
 \newpage
 \section{4.3.3}
 
 \subsection{Problem}
+
+Prove that \((\varepsilon^i \cdot \varepsilon^j)(\varepsilon_j \cdot \varepsilon_k)=\delta^i_k\).
 
 \subsection{Solution}
 
@@ -92,11 +144,25 @@
 
 \subsection{Problem}
 
+Show that \(\Gamma^m_{jk}=\Gamma^m_{kj}\).
+
 \subsection{Solution}
 
 \section{4.3.6}
 
 \subsection{Problem}
+
+Show that the covariant derivative of a covariant vector is given by
+
+\[
+    V_{i;j} \equiv \frac{\partial V_i}{\partial q^j} - V_k\Gamma^k_{ij}.
+\]
+
+\textit{Hint.} Differentiate
+
+\[
+    \varepsilon^i \cdot \varepsilon_j = \delta^i_j.
+\]
 
 \subsection{Solution}
 
